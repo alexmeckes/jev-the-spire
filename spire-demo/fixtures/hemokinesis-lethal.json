@@ -1,0 +1,559 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 7,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "PARAFRIGHT_0",
+          "combat_id": 2,
+          "name": "Parafright",
+          "hp": 21,
+          "max_hp": 21,
+          "block": 0,
+          "status": [
+            {
+              "id": "ILLUSION_POWER",
+              "name": "Illusion",
+              "amount": 1,
+              "type": "Buff",
+              "description": "When this dies, it revives next turn at full HP.",
+              "keywords": []
+            },
+            {
+              "id": "MINION_POWER",
+              "name": "Minion",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Minions abandon combat without their leader.",
+              "keywords": []
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 3,
+              "type": "Buff",
+              "description": "Increases attack damage by 3.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "19",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 19 damage."
+            }
+          ]
+        },
+        {
+          "entity_id": "THE_OBSCURA_0",
+          "combat_id": 1,
+          "name": "The Obscura",
+          "hp": 105,
+          "max_hp": 123,
+          "block": 6,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 3,
+              "type": "Buff",
+              "description": "Increases attack damage by 3.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "13",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 13 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 23,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 1,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "DEMON_FORM",
+          "name": "Demon Form",
+          "type": "Power",
+          "cost": "3",
+          "star_cost": null,
+          "description": "At the start of your turn, gain 2 Strength.",
+          "rarity": "Rare",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BASH",
+          "name": "Bash",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "ANGER",
+          "name": "Anger",
+          "type": "Attack",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Add a copy of this card into your Discard Pile.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "HEMOKINESIS",
+          "name": "Hemokinesis+",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 2 HP. Deal 20 damage.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [],
+          "index": 5,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "INFLAME",
+          "name": "Inflame",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ],
+          "index": 6,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 4,
+      "discard_pile_count": 10,
+      "exhaust_pile_count": 5,
+      "draw_pile": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Burning Pact",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Exhaust 1 card. Draw 2 cards."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Rage+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Equilibrium+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 16 Block. Retain your Hand this turn."
+        },
+        {
+          "name": "Anger",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Anger",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Permanently increase this card's Block by 1. Exhaust."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Permanently increase this card's Block by 1. Exhaust."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Permanently increase this card's Block by 1. Exhaust."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Permanently increase this card's Block by 1. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Permanently increase this card's Block by 1. Exhaust."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Permanently increase this card's Block by 1. Exhaust."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Permanently increase this card's Block by 1. Exhaust."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Permanently increase this card's Block by 1. Exhaust."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Equilibrium+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 16 Block. Retain your Hand this turn."
+        },
+        {
+          "name": "Rage+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 5 Block."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating. Draw 2 cards the first time this is played."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Anger",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Demon Form",
+          "cost": "3",
+          "star_cost": null,
+          "description": "At the start of your turn, gain 2 Strength."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Burning Pact",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Exhaust 1 card. Draw 2 cards."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Hemokinesis+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 2 HP. Deal 20 damage."
+        }
+      ],
+      "gold": 19,
+      "status": [
+        {
+          "id": "THORNS_POWER",
+          "name": "Thorns",
+          "amount": 3,
+          "type": "Buff",
+          "description": "When hit by an attack, deal 3 damage back.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "LEAD_PAPERWEIGHT",
+          "name": "Lead Paperweight",
+          "description": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "ART_OF_WAR",
+          "name": "Art of War",
+          "description": "If you do not play any Attacks during your turn, gain an additional [ironclad_energy_icon.png] next turn.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "PAELS_CLAW",
+          "name": "Pael's Claw",
+          "description": "Upon pickup, Enchant all Defends with Goopy.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Goopy",
+              "description": "This card gains Exhaust. When played, permanently increase this card's Block by 1."
+            },
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ]
+        },
+        {
+          "id": "LANTERN",
+          "name": "Lantern",
+          "description": "Start each combat with an additional [ironclad_energy_icon.png].",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

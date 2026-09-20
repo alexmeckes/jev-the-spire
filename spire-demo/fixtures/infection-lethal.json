@@ -1,0 +1,449 @@
+{
+  "state": {
+    "state_type": "elite",
+    "battle": {
+      "round": 5,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "WRIGGLER_0",
+          "combat_id": 3,
+          "name": "Wriggler",
+          "hp": 6,
+          "max_hp": 20,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Increases attack damage by 2.",
+              "keywords": []
+            },
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "8",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 8 damage."
+            }
+          ]
+        },
+        {
+          "entity_id": "WRIGGLER_1",
+          "combat_id": 4,
+          "name": "Wriggler",
+          "hp": 12,
+          "max_hp": 18,
+          "block": 0,
+          "status": [
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Buff",
+              "label": "",
+              "title": "Empower",
+              "description": "This enemy intends to use a Buff."
+            },
+            {
+              "type": "StatusCard",
+              "label": "1",
+              "title": "Strategic",
+              "description": "This enemy intends to give you 1 Status card."
+            }
+          ]
+        },
+        {
+          "entity_id": "WRIGGLER_2",
+          "combat_id": 5,
+          "name": "Wriggler",
+          "hp": 13,
+          "max_hp": 19,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Increases attack damage by 2.",
+              "keywords": []
+            },
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "8",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 8 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 8,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 10,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 2,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "PERFECTED_STRIKE",
+          "name": "Perfected Strike",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 22 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "INFECTION",
+          "name": "Infection",
+          "type": "Status",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. At the end of your turn, if this is in your Hand, take 3 damage.",
+          "rarity": "Status",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Unplayable",
+              "description": "Unplayable cards cannot be played."
+            }
+          ],
+          "index": 3,
+          "target_type": "None",
+          "can_play": false,
+          "unplayable_reason": "HasUnplayableKeyword"
+        }
+      ],
+      "draw_pile_count": 9,
+      "discard_pile_count": 8,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 51 damage."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Infection",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. At the end of your turn, if this is in your Hand, take 3 damage."
+        },
+        {
+          "name": "Infection",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. At the end of your turn, if this is in your Hand, take 3 damage."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage twice."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Infection",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. At the end of your turn, if this is in your Hand, take 3 damage."
+        },
+        {
+          "name": "Infection",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. At the end of your turn, if this is in your Hand, take 3 damage."
+        },
+        {
+          "name": "Thunderclap",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage and apply 1 Vulnerable to ALL enemies."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Dominate",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Apply 1 Vulnerable. Gain 1 Strength for each Vulnerable on the enemy. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Thunderclap",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 32 damage."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Dominate",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Apply 1 Vulnerable. Gain 1 Strength for each Vulnerable on the enemy. Exhaust."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        }
+      ],
+      "gold": 176,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 2,
+          "type": "Buff",
+          "description": "Increases attack damage by 2.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "LOST_COFFER",
+          "name": "Lost Coffer",
+          "description": "Upon pickup, gain 1 card reward and procure 1 random potion.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  },
+  "originalChoice": "Perfected Strike \u2192 Wriggler",
+  "history": []
+}

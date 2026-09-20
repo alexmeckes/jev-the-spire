@@ -1,0 +1,491 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 10,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "VANTOM_0",
+          "combat_id": 1,
+          "name": "Vantom",
+          "hp": 48,
+          "max_hp": 173,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 4,
+              "type": "Buff",
+              "description": "Increases attack damage by 4.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "10x2",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 10 damage 2 times."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 5,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "WOUND",
+          "name": "Wound",
+          "type": "Status",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable.",
+          "rarity": "Status",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Unplayable",
+              "description": "Unplayable cards cannot be played."
+            }
+          ],
+          "index": 0,
+          "target_type": "None",
+          "can_play": false,
+          "unplayable_reason": "HasUnplayableKeyword"
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "name": "Flame Barrier",
+          "type": "Skill",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DRUM_OF_BATTLE",
+          "name": "Drum of Battle",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "name": "Pommel Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 2,
+      "discard_pile_count": 19,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 32 damage."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Toric Toughness",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 5 Block. Gain 5 Block at the start of the next 2 turns."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Cruelty+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Vulnerable enemies take an additional 50% damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Unrelenting",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 16 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 24 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Rampage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 19 damage. Increase this card's damage by 5 this combat."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Forgotten Ritual",
+          "cost": "1",
+          "star_cost": null,
+          "description": "If you Exhausted a card this turn, gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png]. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Cruelty+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Vulnerable enemies take an additional 50% damage."
+        },
+        {
+          "name": "Unrelenting",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 14 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Flame Barrier",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+        },
+        {
+          "name": "Drum of Battle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Toric Toughness",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 5 Block. Gain 5 Block at the start of the next 2 turns."
+        },
+        {
+          "name": "Rampage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Increase this card's damage by 5 this combat."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Forgotten Ritual",
+          "cost": "1",
+          "star_cost": null,
+          "description": "If you Exhausted a card this turn, gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png]. Exhaust."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 32 damage."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        }
+      ],
+      "gold": 33,
+      "status": [
+        {
+          "id": "VICIOUS_POWER",
+          "name": "Vicious",
+          "amount": 1,
+          "type": "Buff",
+          "description": "Whenever you apply Vulnerable, draw 1 card.",
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "PHIAL_HOLSTER",
+          "name": "Phial Holster",
+          "description": "Upon pickup, gain 1 potion slot and procure 2 random potions.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "VENERABLE_TEA_SET",
+          "name": "Venerable Tea Set",
+          "description": "Whenever you enter a Rest Site, start the next combat with an additional [ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "BAG_OF_MARBLES",
+          "name": "Bag of Marbles",
+          "description": "At the start of each combat, apply 1 Vulnerable to ALL enemies.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ]
+        }
+      ],
+      "potions": [
+        {
+          "id": "WEAK_POTION",
+          "name": "Weak Potion",
+          "description": "Apply 3 Weak.",
+          "slot": 1,
+          "can_use_in_combat": true,
+          "target_type": "AnyEnemy",
+          "keywords": [
+            {
+              "name": "Weak",
+              "description": "Weakened creatures deal 25% less damage with Attacks."
+            }
+          ]
+        }
+      ],
+      "max_potion_slots": 4
+    }
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 5,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "SOUL_FYSH_0",
+          "combat_id": 1,
+          "name": "Soul Fysh",
+          "hp": 134,
+          "max_hp": 211,
+          "block": 0,
+          "status": [
+            {
+              "id": "INTANGIBLE_POWER",
+              "name": "Intangible",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Reduce all damage taken and HP loss to 1. Lasts for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "13",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 13 damage."
+            },
+            {
+              "type": "Debuff",
+              "label": "",
+              "title": "Strategic",
+              "description": "This enemy intends to apply a Debuff to you."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 32,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "POMMEL_STRIKE",
+          "name": "Pommel Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 0,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BASH",
+          "name": "Bash",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "PERFECTED_STRIKE",
+          "name": "Perfected Strike",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 24 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "RAGE",
+          "name": "Rage",
+          "type": "Skill",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 4,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 22,
+      "discard_pile_count": 0,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Body Slam",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal damage equal to your Block. (Deals 22 damage)"
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 24 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 24 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Drum of Battle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Stampede",
+          "cost": "2",
+          "star_cost": null,
+          "description": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Thinking Ahead+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 2 cards. Put 1 card from your Hand on top of your Draw Pile."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        }
+      ],
+      "discard_pile": [],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Drum of Battle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Thinking Ahead+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 2 cards. Put 1 card from your Hand on top of your Draw Pile."
+        },
+        {
+          "name": "Body Slam",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal damage equal to your Block."
+        },
+        {
+          "name": "Stampede",
+          "cost": "2",
+          "star_cost": null,
+          "description": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        }
+      ],
+      "gold": 84,
+      "status": [],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "SMALL_CAPSULE",
+          "name": "Small Capsule",
+          "description": "Upon pickup, obtain a random Relic.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "HORN_CLEAT",
+          "name": "Horn Cleat",
+          "description": "At the start of your 2nd turn, gain 14 Block.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "WAR_PAINT",
+          "name": "War Paint",
+          "description": "Upon pickup, Upgrade 2 random Skills.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "KUNAI",
+          "name": "Kunai",
+          "description": "Every time you play 3 Attacks in a single turn, gain 1 Dexterity.",
+          "counter": 0,
+          "keywords": [
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

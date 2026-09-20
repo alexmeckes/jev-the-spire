@@ -1,0 +1,407 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 12,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "SOUL_FYSH_0",
+          "combat_id": 1,
+          "name": "Soul Fysh",
+          "hp": 64,
+          "max_hp": 211,
+          "block": 0,
+          "status": [],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "24",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 24 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 28,
+      "max_hp": 101,
+      "block": 5,
+      "energy": 1,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "BECKON",
+          "name": "Beckon",
+          "type": "Status",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP.",
+          "rarity": "Status",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 0,
+          "target_type": "None",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BECKON",
+          "name": "Beckon",
+          "type": "Status",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP.",
+          "rarity": "Status",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "None",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BECKON",
+          "name": "Beckon",
+          "type": "Status",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP.",
+          "rarity": "Status",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "None",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 19,
+      "discard_pile_count": 2,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 1 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Flame Barrier",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+        },
+        {
+          "name": "Spite",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 5 damage. If you lost HP this turn, hits 2 times."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        },
+        {
+          "name": "Beckon",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand,  lose 6 HP."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Feed+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 1 damage. If Fatal, raise your Max HP by 4. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Flame Barrier",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Feed+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 12 damage. If Fatal, raise your Max HP by 4. Exhaust."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Spite",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 5 damage. If you lost HP this turn, hits 2 times."
+        }
+      ],
+      "gold": 35,
+      "status": [
+        {
+          "id": "FEEL_NO_PAIN_POWER",
+          "name": "Feel No Pain",
+          "amount": 3,
+          "type": "Buff",
+          "description": "Whenever a card is Exhausted, gain 3 Block.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "VULNERABLE_POWER",
+          "name": "Vulnerable",
+          "amount": 2,
+          "type": "Debuff",
+          "description": "Receive 50% more damage from Attacks for 2 turns.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "STONE_HUMIDIFIER",
+          "name": "Stone Humidifier",
+          "description": "Whenever you Rest at a Rest Site, raise your Max HP by 5.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "JUZU_BRACELET",
+          "name": "Juzu Bracelet",
+          "description": "Regular enemy combats are no longer encountered in ? rooms.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "BAG_OF_MARBLES",
+          "name": "Bag of Marbles",
+          "description": "At the start of each combat, apply 1 Vulnerable to ALL enemies.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

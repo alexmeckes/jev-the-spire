@@ -1,0 +1,712 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 10,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "KNOWLEDGE_DEMON_0",
+          "combat_id": 1,
+          "name": "Knowledge Demon",
+          "hp": 166,
+          "max_hp": 379,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 4,
+              "type": "Buff",
+              "description": "Increases attack damage by 4.",
+              "keywords": []
+            },
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "21",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 21 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 33,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 41,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 2,
+      "max_energy": 2,
+      "hand": [
+        {
+          "id": "UPPERCUT",
+          "name": "Uppercut",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 17 damage. Apply 1 Weak. Apply 1 Vulnerable.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Weak",
+              "description": "Weakened creatures deal 25% less damage with Attacks."
+            },
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 0,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DISMANTLE",
+          "name": "Dismantle",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 12 damage. If the enemy is Vulnerable, hits twice.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend+",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 10 Block.",
+          "rarity": "Basic",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "name": "Pommel Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 13 damage. Draw 1 card.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 10,
+      "discard_pile_count": 13,
+      "exhaust_pile_count": 4,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 15 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage twice."
+        },
+        {
+          "name": "Dismantle+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 11 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Primal Force+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock+."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Rampage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 19 damage. Increase this card's damage by 5 this combat."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 26 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 26 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Unrelenting",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 21 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 10 Block."
+        },
+        {
+          "name": "Cinder",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 22 damage. Exhaust 1 card at random."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 11 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 14 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Draw 1 card."
+        },
+        {
+          "name": "Rampage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 14 damage. Increase this card's damage by 5 this combat."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Enlightenment",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Reduce the cost of ALL cards in your Hand to 1 this turn. Exhaust."
+        },
+        {
+          "name": "Enlightenment",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Reduce the cost of ALL cards in your Hand to 1 this turn. Exhaust."
+        },
+        {
+          "name": "Impervious",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 32 Block. Exhaust."
+        },
+        {
+          "name": "Drum of Battle+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 12 damage."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Draw 1 card."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Unrelenting",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 17 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Primal Force+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock+."
+        },
+        {
+          "name": "Dark Embrace",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, draw 1 card."
+        },
+        {
+          "name": "Rampage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Increase this card's damage by 5 this combat."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Cinder",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 18 damage. Exhaust 1 card at random."
+        },
+        {
+          "name": "Dismantle+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 13 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Drum of Battle+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Enlightenment",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Reduce the cost of ALL cards in your Hand to 1 this turn. Exhaust."
+        },
+        {
+          "name": "Enlightenment",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Reduce the cost of ALL cards in your Hand to 1 this turn. Exhaust."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Impervious",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 30 Block. Exhaust."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        }
+      ],
+      "gold": 29,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 4,
+          "type": "Buff",
+          "description": "Increases attack damage by 4.",
+          "keywords": []
+        },
+        {
+          "id": "DARK_EMBRACE_POWER",
+          "name": "Dark Embrace",
+          "amount": 1,
+          "type": "Buff",
+          "description": "Whenever a card is Exhausted, draw 1 card.",
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ]
+        },
+        {
+          "id": "DEXTERITY_POWER",
+          "name": "Dexterity",
+          "amount": 2,
+          "type": "Buff",
+          "description": "Increases Block gained from cards by 2.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "MIND_ROT_POWER",
+          "name": "Mind Rot",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "Draw 1 fewer card each turn.",
+          "keywords": []
+        },
+        {
+          "id": "VICIOUS_POWER",
+          "name": "Vicious",
+          "amount": 1,
+          "type": "Buff",
+          "description": "Whenever you apply Vulnerable, draw 1 card.",
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ]
+        },
+        {
+          "id": "SLOTH_POWER",
+          "name": "Sloth",
+          "amount": 0,
+          "type": "Debuff",
+          "description": "You cannot play more than 3 cards each turn.",
+          "keywords": []
+        },
+        {
+          "id": "WASTE_AWAY_POWER",
+          "name": "Waste Away",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "Gain 1 less [ironclad_energy_icon.png] per turn.",
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NEOWS_TALISMAN",
+          "name": "Neow's Talisman",
+          "description": "Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "LANTERN",
+          "name": "Lantern",
+          "description": "Start each combat with an additional [ironclad_energy_icon.png].",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "RAINBOW_RING",
+          "name": "Rainbow Ring",
+          "description": "The first time you play an Attack, Skill, and Power each turn, gain 1 Strength and 1 Dexterity.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            },
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards."
+            }
+          ]
+        },
+        {
+          "id": "WAR_PAINT",
+          "name": "War Paint",
+          "description": "Upon pickup, Upgrade 2 random Skills.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "GREMLIN_HORN",
+          "name": "Gremlin Horn",
+          "description": "Whenever an enemy dies, gain [ironclad_energy_icon.png] and draw 1 card.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "REGAL_PILLOW",
+          "name": "Regal Pillow",
+          "description": "Whenever you Rest, heal an additional 15 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "VERY_HOT_COCOA",
+          "name": "Very Hot Cocoa",
+          "description": "Start each combat with an additional 4[ironclad_energy_icon.png].",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "GNARLED_HAMMER",
+          "name": "Gnarled Hammer",
+          "description": "Upon pickup, Enchant up to 3 Attacks with Sharp 3.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Sharp",
+              "description": "Increases damage on this card by 3."
+            }
+          ]
+        },
+        {
+          "id": "GORGET",
+          "name": "Gorget",
+          "description": "At the start of each combat, gain 4 Plating.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "potions": [
+        {
+          "id": "FAIRY_IN_A_BOTTLE",
+          "name": "Fairy in a Bottle",
+          "description": "When your HP would be reduced to 0, instead this potion is discarded and you heal to 30% of your Max HP.",
+          "slot": 0,
+          "can_use_in_combat": false,
+          "target_type": "Self",
+          "keywords": []
+        }
+      ],
+      "max_potion_slots": 3
+    }
+  }
+}

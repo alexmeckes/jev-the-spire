@@ -1,0 +1,15 @@
+{
+  "name": "jev-the-spire",
+  "private": true,
+  "type": "module",
+  "description": "Watch TypeSafe Jev play Slay the Spire 2",
+  "scripts": {
+    "start": "node spire-demo/server.mjs",
+    "test": "node --test spire-demo/*.test.mjs",
+    "report": "node spire-demo/report.mjs",
+    "benchmark:dry": "node spire-demo/benchmark/run.mjs --dry-run"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

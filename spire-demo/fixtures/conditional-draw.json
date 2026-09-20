@@ -1,0 +1,359 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 2,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "LAGAVULIN_MATRIARCH_0",
+          "combat_id": 1,
+          "name": "Lagavulin Matriarch",
+          "hp": 193,
+          "max_hp": 222,
+          "block": 0,
+          "status": [],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "19",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 19 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 69,
+      "max_hp": 80,
+      "block": 5,
+      "energy": 0,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "DRUM_OF_BATTLE",
+          "name": "Drum of Battle+",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": false,
+          "unplayable_reason": "EnergyCostTooHigh"
+        },
+        {
+          "id": "RESTLESSNESS",
+          "name": "Restlessness+",
+          "type": "Skill",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Retain. If your Hand is empty, draw 3 cards and gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            },
+            {
+              "name": "Retain",
+              "description": "Retained cards are not discarded at the end of turn."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 7,
+      "discard_pile_count": 6,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Molten Fist+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage. Double the enemy's Vulnerable. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Restlessness+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Retain. If your Hand is empty, draw 3 cards and gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Molten Fist+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage. Double the enemy's Vulnerable. Exhaust."
+        },
+        {
+          "name": "Stone Armor+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 6 Plating."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Drum of Battle+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        }
+      ],
+      "gold": 79,
+      "status": [
+        {
+          "id": "PLATING_POWER",
+          "name": "Plating",
+          "amount": 6,
+          "type": "Buff",
+          "description": "At the end of your turn, gain 6 Block. Plating is reduced by 1 at the start of your turn.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "LEAD_PAPERWEIGHT",
+          "name": "Lead Paperweight",
+          "description": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "MEAT_ON_THE_BONE",
+          "name": "Meat on the Bone",
+          "description": "If your HP is at or below 50% at the end of combat, heal 12 HP.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [
+        {
+          "id": "FYSH_OIL",
+          "name": "Fysh Oil",
+          "description": "Gain 1 Strength and 1 Dexterity.",
+          "slot": 0,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            },
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards."
+            }
+          ]
+        },
+        {
+          "id": "LIQUID_BRONZE",
+          "name": "Liquid Bronze",
+          "description": "Gain 3 Thorns.",
+          "slot": 1,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Thorns",
+              "description": "When hit by an attack, deal damage back."
+            }
+          ]
+        }
+      ],
+      "max_potion_slots": 3
+    }
+  }
+}

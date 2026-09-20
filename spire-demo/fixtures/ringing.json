@@ -1,0 +1,564 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 9,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "CEREMONIAL_BEAST_0",
+          "combat_id": 1,
+          "name": "Ceremonial Beast",
+          "hp": 20,
+          "max_hp": 252,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 3,
+              "type": "Buff",
+              "description": "Increases attack damage by 3.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "18",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 18 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 2,
+      "max_hp": 72,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "VICIOUS",
+          "name": "Vicious",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card. Ringing.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            },
+            {
+              "name": "Ringing",
+              "description": "You can only play 1 card this turn."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. Ringing.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Ringing",
+              "description": "You can only play 1 card this turn."
+            }
+          ],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "TRUE_GRIT",
+          "name": "True Grit",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random. Ringing.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            },
+            {
+              "name": "Ringing",
+              "description": "You can only play 1 card this turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "ARMAMENTS",
+          "name": "Armaments",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand. Ringing.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Ringing",
+              "description": "You can only play 1 card this turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "SETUP_STRIKE",
+          "name": "Setup Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Gain 2 Strength this turn. Ringing.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            },
+            {
+              "name": "Ringing",
+              "description": "You can only play 1 card this turn."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 8,
+      "discard_pile_count": 15,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable. Ringing."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Ringing."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Ringing."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Ringing."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage twice. Ringing."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block. Ringing."
+        },
+        {
+          "name": "Spite",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 13 damage. If you lost HP this turn, hits 2 times. Ringing."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating. Ringing."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Stomp",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 14 damage to ALL enemies. Costs 1 less [ironclad_energy_icon.png] for each Attack played this turn. Ringing."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage. Ringing."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Ringing."
+        },
+        {
+          "name": "Barricade",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Block is not removed at the start of your turn. Ringing."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Ringing."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 34 damage. Ringing."
+        },
+        {
+          "name": "True Grit",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random. Ringing."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card. Ringing."
+        },
+        {
+          "name": "Taunt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Apply 1 Vulnerable. Ringing."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card. Ringing."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 26 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d. Ringing."
+        },
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 11 damage to ALL enemies. Ringing."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Ringing."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Ringing."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Ringing."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Tremble",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Apply 3 Vulnerable. Ringing. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "True Grit",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Tremble",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Apply 3 Vulnerable. Exhaust."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Spite",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 5 damage. If you lost HP this turn, hits 2 times."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Barricade",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Block is not removed at the start of your turn."
+        },
+        {
+          "name": "True Grit",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random."
+        },
+        {
+          "name": "Stomp",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 12 damage to ALL enemies. Costs 1 less [ironclad_energy_icon.png] for each Attack played this turn."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 9 damage to ALL enemies."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 32 damage."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Taunt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Apply 1 Vulnerable."
+        }
+      ],
+      "gold": 25,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 2,
+          "type": "Buff",
+          "description": "Increases attack damage by 2.",
+          "keywords": []
+        },
+        {
+          "id": "RINGING_POWER",
+          "name": "Ringing",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "You can only play 1 card this turn.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "SCROLL_BOXES",
+          "name": "Scroll Boxes",
+          "description": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "PRAYER_WHEEL",
+          "name": "Prayer Wheel",
+          "description": "Normal enemies drop an additional card reward.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "AKABEKO",
+          "name": "Akabeko",
+          "description": "At the start of each combat, gain 8 Vigor.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Vigor",
+              "description": "Your next Attack deals additional damage."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

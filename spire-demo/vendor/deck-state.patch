@@ -1,0 +1,12 @@
+diff --git a/McpMod.StateBuilder.cs b/McpMod.StateBuilder.cs
+index 76eee84..d6f8ae0 100644
+--- a/McpMod.StateBuilder.cs
++++ b/McpMod.StateBuilder.cs
+@@ -1178,6 +1178,7 @@ public static partial class McpMod
+             }
+         }
+ 
++        state["deck"] = BuildPileCardList(player.Deck.Cards, PileType.Deck);
+         state["gold"] = player.Gold;
+ 
+         // Powers (status effects)

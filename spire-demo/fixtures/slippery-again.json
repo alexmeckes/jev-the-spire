@@ -1,0 +1,496 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 5,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "VANTOM_0",
+          "combat_id": 1,
+          "name": "Vantom",
+          "hp": 167,
+          "max_hp": 173,
+          "block": 0,
+          "status": [
+            {
+              "id": "SLIPPERY_POWER",
+              "name": "Slippery",
+              "amount": 2,
+              "type": "Buff",
+              "description": "The next 2 times Vantom loses HP, it only loses 1 HP instead.",
+              "keywords": []
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Increases attack damage by 2.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "9",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 9 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 48,
+      "max_hp": 87,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 0,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BLUDGEON",
+          "name": "Bludgeon+",
+          "type": "Attack",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 45 damage.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "RAGE",
+          "name": "Rage",
+          "type": "Skill",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "SETUP_STRIKE",
+          "name": "Setup Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Gain 2 Strength this turn.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 18,
+      "discard_pile_count": 0,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Rampage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 14 damage. Increase this card's damage by 5 this combat."
+        },
+        {
+          "name": "Stomp",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 12 damage to ALL enemies. Costs 1 less [ironclad_energy_icon.png] for each Attack played this turn."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 14 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 16 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Whirlwind",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Deal 8 damage to ALL enemies X times."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        }
+      ],
+      "discard_pile": [],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Stomp",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 12 damage to ALL enemies. Costs 1 less [ironclad_energy_icon.png] for each Attack played this turn."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Bludgeon+",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 42 damage."
+        },
+        {
+          "name": "Rampage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Increase this card's damage by 5 this combat."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Whirlwind",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Deal 5 damage to ALL enemies X times."
+        }
+      ],
+      "gold": 232,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 3,
+          "type": "Buff",
+          "description": "Increases attack damage by 3.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "GORGET",
+          "name": "Gorget",
+          "description": "At the start of each combat, gain 4 Plating.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "VAJRA",
+          "name": "Vajra",
+          "description": "Start each combat with 1 Strength.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "ORNAMENTAL_FAN",
+          "name": "Ornamental Fan",
+          "description": "Every time you play 3 Attacks in a single turn, gain 4 Block.",
+          "counter": 0,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "potions": [
+        {
+          "id": "STRENGTH_POTION",
+          "name": "Strength Potion",
+          "description": "Gain 2 Strength.",
+          "slot": 0,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "BLOCK_POTION",
+          "name": "Block Potion",
+          "description": "Gain 12 Block.",
+          "slot": 1,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "ENERGY_POTION",
+          "name": "Energy Potion",
+          "description": "Gain [ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "slot": 2,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        }
+      ],
+      "max_potion_slots": 3
+    }
+  },
+  "originalChoice": "Bludgeon+ \u2192 Vantom",
+  "recordedAt": "2026-09-17T23:39:00.493Z"
+}

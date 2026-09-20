@@ -1,0 +1,408 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 1,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "MYTE_0",
+          "combat_id": 1,
+          "name": "Myte",
+          "hp": 67,
+          "max_hp": 67,
+          "block": 0,
+          "status": [],
+          "intents": [
+            {
+              "type": "StatusCard",
+              "label": "2",
+              "title": "Strategic",
+              "description": "This enemy intends to give you 2 Status cards."
+            }
+          ]
+        },
+        {
+          "entity_id": "MYTE_1",
+          "combat_id": 2,
+          "name": "Myte",
+          "hp": 64,
+          "max_hp": 64,
+          "block": 0,
+          "status": [],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "4",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 4 damage."
+            },
+            {
+              "type": "Buff",
+              "label": "",
+              "title": "Empower",
+              "description": "This enemy intends to use a Buff."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 22,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 29,
+      "max_hp": 91,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "GIANT_ROCK",
+          "name": "Giant Rock",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage.",
+          "rarity": "Token",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 0,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "GIANT_ROCK",
+          "name": "Giant Rock",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage.",
+          "rarity": "Token",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "GIANT_ROCK",
+          "name": "Giant Rock",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage.",
+          "rarity": "Token",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "GIANT_ROCK",
+          "name": "Giant Rock",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage.",
+          "rarity": "Token",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "GIANT_ROCK",
+          "name": "Giant Rock",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage.",
+          "rarity": "Token",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 15,
+      "discard_pile_count": 1,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Draw 1 card."
+        },
+        {
+          "name": "Ashen Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Battle Trance+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 4 cards. You cannot draw additional cards this turn."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock."
+        }
+      ],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Draw 1 card."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock."
+        },
+        {
+          "name": "Battle Trance+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 4 cards. You cannot draw additional cards this turn."
+        },
+        {
+          "name": "Ashen Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        }
+      ],
+      "gold": 345,
+      "status": [],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NUTRITIOUS_OYSTER",
+          "name": "Nutritious Oyster",
+          "description": "Upon pickup, raise your Max HP by 11.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "MEAL_TICKET",
+          "name": "Meal Ticket",
+          "description": "Whenever you enter a shop room, heal 15 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "PAELS_BLOOD",
+          "name": "Pael's Blood",
+          "description": "At the start of your turn, draw 1 additional card.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

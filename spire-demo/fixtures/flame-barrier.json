@@ -1,0 +1,474 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 5,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "HUNTER_KILLER_0",
+          "combat_id": 1,
+          "name": "Hunter Killer",
+          "hp": 52,
+          "max_hp": 121,
+          "block": 0,
+          "status": [],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "7x3",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 7 damage 3 times."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 21,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 8,
+      "max_hp": 95,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "FLAME_BARRIER",
+          "name": "Flame Barrier",
+          "type": "Skill",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BURNING_PACT",
+          "name": "Burning Pact",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Exhaust 1 card. Draw 2 cards.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "PERFECTED_STRIKE",
+          "name": "Perfected Strike",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "EVIL_EYE",
+          "name": "Evil Eye",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "JUGGLING",
+          "name": "Juggling+",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. Add a copy of the third Attack you play each turn into your Hand.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Innate",
+              "description": "Start each combat with this card in your Hand."
+            }
+          ],
+          "index": 4,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 17,
+      "discard_pile_count": 0,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Bash+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 10 damage. Apply 3 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 3 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 32 damage."
+        },
+        {
+          "name": "Dominate",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Apply 1 Vulnerable. Gain 1 Strength for each Vulnerable on the enemy. Exhaust."
+        },
+        {
+          "name": "Spite",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 2 damage. If you lost HP this turn, hits 2 times."
+        },
+        {
+          "name": "Feed",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. If Fatal, raise your Max HP by 3. Exhaust."
+        }
+      ],
+      "discard_pile": [],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Dominate",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Apply 1 Vulnerable. Gain 1 Strength for each Vulnerable on the enemy. Exhaust."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Bludgeon",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 32 damage."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Flame Barrier",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Burning Pact",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Exhaust 1 card. Draw 2 cards."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Feed",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. If Fatal, raise your Max HP by 3. Exhaust."
+        },
+        {
+          "name": "Spite",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 5 damage. If you lost HP this turn, hits 2 times."
+        },
+        {
+          "name": "Juggling+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. Add a copy of the third Attack you play each turn into your Hand."
+        }
+      ],
+      "gold": 249,
+      "status": [
+        {
+          "id": "TENDER_POWER",
+          "name": "Tender",
+          "amount": 0,
+          "type": "Debuff",
+          "description": "Whenever you play a card, lose 1 Strength and 1 Dexterity this turn.",
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            },
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards."
+            }
+          ]
+        },
+        {
+          "id": "PLATING_POWER",
+          "name": "Plating",
+          "amount": 3,
+          "type": "Buff",
+          "description": "At the end of your turn, gain 3 Block. Plating is reduced by 1 at the start of your turn.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "STONE_HUMIDIFIER",
+          "name": "Stone Humidifier",
+          "description": "Whenever you Rest at a Rest Site, raise your Max HP by 5.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "SWORD_OF_STONE",
+          "name": "Sword of Stone",
+          "description": "Transforms into a powerful Relic after defeating 5 Elites.",
+          "counter": 0,
+          "keywords": []
+        },
+        {
+          "id": "REPTILE_TRINKET",
+          "name": "Reptile Trinket",
+          "description": "Whenever you use a potion, gain 3 Strength this turn.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "PAELS_TEARS",
+          "name": "Pael's Tears",
+          "description": "If you end your turn with unspent [ironclad_energy_icon.png], gain an additional [ironclad_energy_icon.png][ironclad_energy_icon.png] next turn.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

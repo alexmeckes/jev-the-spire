@@ -1,0 +1,395 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 4,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "CEREMONIAL_BEAST_0",
+          "combat_id": 1,
+          "name": "Ceremonial Beast",
+          "hp": 198,
+          "max_hp": 252,
+          "block": 0,
+          "status": [
+            {
+              "id": "PLOW_POWER",
+              "name": "Plow",
+              "amount": 150,
+              "type": "Debuff",
+              "description": "The first time Ceremonial Beast's HP reaches 150 or below, it becomes Stunned and loses all its Strength.",
+              "keywords": [
+                {
+                  "name": "Stun",
+                  "description": "Prevent the enemy from acting on its next turn."
+                },
+                {
+                  "name": "Strength",
+                  "description": "Strength adds additional damage to Attacks."
+                }
+              ]
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 4,
+              "type": "Buff",
+              "description": "Increases attack damage by 4.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "22",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 22 damage."
+            },
+            {
+              "type": "Buff",
+              "label": "",
+              "title": "Empower",
+              "description": "This enemy intends to use a Buff."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 57,
+      "max_hp": 80,
+      "block": 5,
+      "energy": 2,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "BASH",
+          "name": "Bash",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 0,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "CONFLAGRATION",
+          "name": "Conflagration",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 2 damage to ALL enemies 4 times.",
+          "rarity": "Rare",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AllEnemies",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 15,
+      "discard_pile_count": 1,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Thunderclap",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Mind Blast",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. Deal damage equal to the number of cards in your Draw Pile. (Deals 14 damage)"
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Cascade",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Play the top X cards of your Draw Pile."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        }
+      ],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Cascade",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Play the top X cards of your Draw Pile."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Mind Blast",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. Deal damage equal to the number of cards in your Draw Pile."
+        },
+        {
+          "name": "Conflagration",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 2 damage to ALL enemies 4 times."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Thunderclap",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        }
+      ],
+      "gold": 87,
+      "status": [],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "ARCANE_SCROLL",
+          "name": "Arcane Scroll",
+          "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "TUNING_FORK",
+          "name": "Tuning Fork",
+          "description": "Every time you play 10 Skills, gain 7 Block.",
+          "counter": 8,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  },
+  "originalChoice": "End turn",
+  "recordedAt": "2026-09-18T00:32:09.787Z"
+}

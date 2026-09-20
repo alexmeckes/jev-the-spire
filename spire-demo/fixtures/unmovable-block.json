@@ -1,0 +1,586 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 6,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "CRUSHER_0",
+          "combat_id": 1,
+          "name": "Crusher",
+          "hp": 90,
+          "max_hp": 209,
+          "block": 18,
+          "status": [
+            {
+              "id": "BACK_ATTACK_LEFT_POWER",
+              "name": "Back Attack",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Deals 50% more damage when it is attacking you from behind.",
+              "keywords": []
+            },
+            {
+              "id": "CRAB_RAGE_POWER",
+              "name": "Crab Rage",
+              "amount": 1,
+              "type": "Buff",
+              "description": "When an ally dies, Crusher gains 6 Strength and 99 Block.",
+              "keywords": [
+                {
+                  "name": "Strength",
+                  "description": "Strength adds additional damage to Attacks."
+                },
+                {
+                  "name": "Block",
+                  "description": "Until next turn, prevents damage."
+                }
+              ]
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Increases attack damage by 2.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "14",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 14 damage."
+            }
+          ]
+        },
+        {
+          "entity_id": "ROCKET_0",
+          "combat_id": 2,
+          "name": "Rocket",
+          "hp": 179,
+          "max_hp": 199,
+          "block": 0,
+          "status": [
+            {
+              "id": "BACK_ATTACK_RIGHT_POWER",
+              "name": "Back Attack",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Deals 50% more damage when it is attacking you from behind.",
+              "keywords": []
+            },
+            {
+              "id": "CRAB_RAGE_POWER",
+              "name": "Crab Rage",
+              "amount": 1,
+              "type": "Buff",
+              "description": "When an ally dies, Rocket gains 6 Strength and 99 Block.",
+              "keywords": [
+                {
+                  "name": "Strength",
+                  "description": "Strength adds additional damage to Attacks."
+                },
+                {
+                  "name": "Block",
+                  "description": "Until next turn, prevents damage."
+                }
+              ]
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Increases attack damage by 2.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "7",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 7 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 33,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 15,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 14 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STOMP",
+          "name": "Stomp+",
+          "type": "Attack",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 15 damage to ALL enemies. Costs 1 less [ironclad_energy_icon.png] for each Attack played this turn.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AllEnemies",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BASH",
+          "name": "Bash",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 14 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "THUNDERCLAP",
+          "name": "Thunderclap",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 4,
+          "target_type": "AllEnemies",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 12,
+      "discard_pile_count": 5,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 10 Block. Deal 3 damage."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 32 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pommel Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 2 cards."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Howl from Beyond+",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 21 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Eternal."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 15 Block."
+        },
+        {
+          "name": "Whirlwind+",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Deal 6 damage to ALL enemies X times."
+        },
+        {
+          "name": "Strike+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Impervious+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 40 Block. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Twin Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage twice."
+        },
+        {
+          "name": "Thunderclap",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Unmovable+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "The first time you gain Block from a card each turn, double the amount gained."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Impervious+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 40 Block. Exhaust."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Whirlwind+",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Deal 8 damage to ALL enemies X times."
+        },
+        {
+          "name": "Howl from Beyond",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 16 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it."
+        },
+        {
+          "name": "Pommel Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 2 cards."
+        },
+        {
+          "name": "Stomp+",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 15 damage to ALL enemies. Costs 1 less [ironclad_energy_icon.png] for each Attack played this turn."
+        }
+      ],
+      "gold": 342,
+      "status": [
+        {
+          "id": "SURROUNDED_POWER",
+          "name": "Surrounded",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "Receive 50% more damage if attacked from behind. Use targeting cards or potions to change your orientation.",
+          "keywords": []
+        },
+        {
+          "id": "DEXTERITY_POWER",
+          "name": "Dexterity",
+          "amount": 2,
+          "type": "Buff",
+          "description": "Increases Block gained from cards by 2.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "UNMOVABLE_POWER",
+          "name": "Unmovable",
+          "amount": 1,
+          "type": "Buff",
+          "description": "The first time you gain Block from a card each turn, double the amount gained.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "SCROLL_BOXES",
+          "name": "Scroll Boxes",
+          "description": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "BAG_OF_PREPARATION",
+          "name": "Bag of Preparation",
+          "description": "At the start of each combat, draw 2 additional cards.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "JUZU_BRACELET",
+          "name": "Juzu Bracelet",
+          "description": "Regular enemy combats are no longer encountered in ? rooms.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NUTRITIOUS_SOUP",
+          "name": "Nutritious Soup",
+          "description": "Upon pickup, Enchant all Strikes in your Deck with Tezcatara's Ember.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Tezcatara's Ember",
+              "description": "Costs 0, deals 3 additional damage, and gains Eternal."
+            },
+            {
+              "name": "Eternal",
+              "description": "Cannot be removed or transformed from your Deck."
+            }
+          ]
+        },
+        {
+          "id": "BELLOWS",
+          "name": "Bellows",
+          "description": "The first Hand you draw each combat is Upgraded.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "WAR_PAINT",
+          "name": "War Paint",
+          "description": "Upon pickup, Upgrade 2 random Skills.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

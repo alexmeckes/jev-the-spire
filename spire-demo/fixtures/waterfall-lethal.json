@@ -1,0 +1,390 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 16,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "WATERFALL_GIANT_0",
+          "combat_id": 1,
+          "name": "Waterfall Giant",
+          "hp": 9,
+          "max_hp": 240,
+          "block": 0,
+          "status": [
+            {
+              "id": "STEAM_ERUPTION_POWER",
+              "name": "Steam Eruption",
+              "amount": 57,
+              "type": "Buff",
+              "description": "When killed, deals 57 damage at the end of your next turn.",
+              "keywords": []
+            },
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "13",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 13 damage."
+            },
+            {
+              "type": "Buff",
+              "label": "",
+              "title": "Empower",
+              "description": "This enemy intends to use a Buff."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 22,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 2,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "SPOILS_MAP",
+          "name": "Spoils Map",
+          "type": "Quest",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. Marks a site of 600 extra Gold in the next Act.",
+          "rarity": "Quest",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Unplayable",
+              "description": "Unplayable cards cannot be played."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": false,
+          "unplayable_reason": "HasUnplayableKeyword"
+        }
+      ],
+      "draw_pile_count": 2,
+      "discard_pile_count": 11,
+      "exhaust_pile_count": 2,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Headbutt+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 12 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Armaments+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade ALL cards in your Hand."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Pommel Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 2 cards."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 12 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Evil Eye+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Gain another 11 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Molten Fist",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Double the enemy's Vulnerable. Exhaust."
+        },
+        {
+          "name": "Dramatic Entrance",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Innate. Deal 11 damage to ALL enemies. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 11 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Molten Fist",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Double the enemy's Vulnerable. Exhaust."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Dramatic Entrance",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Innate. Deal 11 damage to ALL enemies. Exhaust."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Stone Armor+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 6 Plating."
+        },
+        {
+          "name": "Armaments+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade ALL cards in your Hand."
+        },
+        {
+          "name": "Spoils Map",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. Marks a site of 600 extra Gold in the next Act."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        }
+      ],
+      "gold": 44,
+      "status": [],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NEOWS_TALISMAN",
+          "name": "Neow's Talisman",
+          "description": "Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "INTIMIDATING_HELMET",
+          "name": "Intimidating Helmet",
+          "description": "Whenever you play a card that costs [ironclad_energy_icon.png][ironclad_energy_icon.png] or more, gain 4 Block.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

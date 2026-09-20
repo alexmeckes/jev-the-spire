@@ -1,0 +1,10 @@
+.private/
+.env
+.env.*
+!.env.example
+*.cfg
+node_modules/
+.DS_Store
+*.log
+*.jsonl
+*.app/

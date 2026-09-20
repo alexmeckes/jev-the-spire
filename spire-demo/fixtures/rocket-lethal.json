@@ -1,0 +1,574 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 7,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "ROCKET_0",
+          "combat_id": 2,
+          "name": "Rocket",
+          "hp": 133,
+          "max_hp": 199,
+          "block": 0,
+          "status": [
+            {
+              "id": "BACK_ATTACK_RIGHT_POWER",
+              "name": "Back Attack",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Deals 50% more damage when it is attacking you from behind.",
+              "keywords": []
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 8,
+              "type": "Buff",
+              "description": "Increases attack damage by 8.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "26",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 26 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 33,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 23,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "EXPECT_A_FIGHT",
+          "name": "Expect a Fight+",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] for each Attack in your Hand. You cannot gain additional [ironclad_energy_icon.png] this turn. (Gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png])",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BULLY",
+          "name": "Bully",
+          "type": "Attack",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 10 damage. Deals 2 additional damage for each Vulnerable on the enemy.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "HOWL_FROM_BEYOND",
+          "name": "Howl from Beyond",
+          "type": "Attack",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 22 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 2,
+          "target_type": "AllEnemies",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DRUM_OF_BATTLE",
+          "name": "Drum of Battle",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 15 damage. Eternal.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Tezcatara's Ember",
+              "description": "Costs 0, deals 3 additional damage, and gains Eternal."
+            },
+            {
+              "name": "Eternal",
+              "description": "Cannot be removed or transformed from your Deck."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 17,
+      "discard_pile_count": 0,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 9 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 16 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 8 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 13 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 12 damage. Eternal."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 24 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pommel Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 13 damage. Draw 2 cards."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Hemokinesis",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 2 HP. Deal 15 damage."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Dark Embrace",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, draw 1 card."
+        }
+      ],
+      "discard_pile": [],
+      "exhaust_pile": [
+        {
+          "name": "Offering+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Lose 6 HP. Gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Draw 5 cards. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 12 damage. Eternal."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Defend+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Hemokinesis",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 2 HP. Deal 15 damage."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Drum of Battle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Draw 2 cards. When this card is Exhausted, gain [ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Pommel Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 2 cards."
+        },
+        {
+          "name": "Offering+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Lose 6 HP. Gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Draw 5 cards. Exhaust."
+        },
+        {
+          "name": "Howl from Beyond",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 16 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it."
+        },
+        {
+          "name": "Demon Form",
+          "cost": "3",
+          "star_cost": null,
+          "description": "At the start of your turn, gain 2 Strength."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Expect a Fight+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] for each Attack in your Hand. You cannot gain additional [ironclad_energy_icon.png] this turn."
+        },
+        {
+          "name": "Dark Embrace",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, draw 1 card."
+        }
+      ],
+      "gold": 252,
+      "status": [
+        {
+          "id": "DEXTERITY_POWER",
+          "name": "Dexterity",
+          "amount": 1,
+          "type": "Buff",
+          "description": "Increases Block gained from cards by 1.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "SURROUNDED_POWER",
+          "name": "Surrounded",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "Receive 50% more damage if attacked from behind. Use targeting cards or potions to change your orientation.",
+          "keywords": []
+        },
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 6,
+          "type": "Buff",
+          "description": "Increases attack damage by 6.",
+          "keywords": []
+        },
+        {
+          "id": "DEMON_FORM_POWER",
+          "name": "Demon Form",
+          "amount": 2,
+          "type": "Buff",
+          "description": "At the start of your turn, gain 2 Strength.",
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NEOWS_TALISMAN",
+          "name": "Neow's Talisman",
+          "description": "Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "ANCHOR",
+          "name": "Anchor",
+          "description": "Start each combat with 10 Block.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "ODDLY_SMOOTH_STONE",
+          "name": "Oddly Smooth Stone",
+          "description": "Start each combat with 1 Dexterity.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards."
+            }
+          ]
+        },
+        {
+          "id": "CENTENNIAL_PUZZLE",
+          "name": "Centennial Puzzle",
+          "description": "The first time you lose HP each combat, draw 3 cards.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "RED_MASK",
+          "name": "Red Mask",
+          "description": "At the start of each combat, apply 1 Weak to ALL enemies.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Weak",
+              "description": "Weakened creatures deal 25% less damage with Attacks."
+            }
+          ]
+        },
+        {
+          "id": "NUTRITIOUS_SOUP",
+          "name": "Nutritious Soup",
+          "description": "Upon pickup, Enchant all Strikes in your Deck with Tezcatara's Ember.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Tezcatara's Ember",
+              "description": "Costs 0, deals 3 additional damage, and gains Eternal."
+            },
+            {
+              "name": "Eternal",
+              "description": "Cannot be removed or transformed from your Deck."
+            }
+          ]
+        },
+        {
+          "id": "WAR_PAINT",
+          "name": "War Paint",
+          "description": "Upon pickup, Upgrade 2 random Skills.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "CLOAK_CLASP",
+          "name": "Cloak Clasp",
+          "description": "At the end of your turn, gain 1 Block for each card in your Hand.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 2,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "MYTE_0",
+          "combat_id": 1,
+          "name": "Myte",
+          "hp": 61,
+          "max_hp": 67,
+          "block": 0,
+          "status": [],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "13",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 13 damage."
+            }
+          ]
+        },
+        {
+          "entity_id": "MYTE_1",
+          "combat_id": 2,
+          "name": "Myte",
+          "hp": 64,
+          "max_hp": 64,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Increases attack damage by 2.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "StatusCard",
+              "label": "2",
+              "title": "Strategic",
+              "description": "This enemy intends to give you 2 Status cards."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 22,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 25,
+      "max_hp": 91,
+      "block": 10,
+      "energy": 0,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "TOXIC",
+          "name": "Toxic",
+          "type": "Status",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand, take 5 damage. Exhaust.",
+          "rarity": "Status",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 0,
+          "target_type": "None",
+          "can_play": false,
+          "unplayable_reason": "EnergyCostTooHigh"
+        },
+        {
+          "id": "TOXIC",
+          "name": "Toxic",
+          "type": "Status",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the end of your turn, if this is in your Hand, take 5 damage. Exhaust.",
+          "rarity": "Status",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 1,
+          "target_type": "None",
+          "can_play": false,
+          "unplayable_reason": "EnergyCostTooHigh"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "name": "Battle Trance+",
+          "type": "Skill",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 4 cards. You cannot draw additional cards this turn.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "JUGGLING",
+          "name": "Juggling",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": false,
+          "unplayable_reason": "EnergyCostTooHigh"
+        },
+        {
+          "id": "ASHEN_STRIKE",
+          "name": "Ashen Strike+",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 4 additional damage for each card in your Exhaust Pile.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": false,
+          "unplayable_reason": "EnergyCostTooHigh"
+        }
+      ],
+      "draw_pile_count": 9,
+      "discard_pile_count": 9,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Draw 1 card."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        }
+      ],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Draw 1 card."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock."
+        },
+        {
+          "name": "Battle Trance+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 4 cards. You cannot draw additional cards this turn."
+        },
+        {
+          "name": "Ashen Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        }
+      ],
+      "gold": 345,
+      "status": [],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NUTRITIOUS_OYSTER",
+          "name": "Nutritious Oyster",
+          "description": "Upon pickup, raise your Max HP by 11.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "MEAL_TICKET",
+          "name": "Meal Ticket",
+          "description": "Whenever you enter a shop room, heal 15 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "PAELS_BLOOD",
+          "name": "Pael's Blood",
+          "description": "At the start of your turn, draw 1 additional card.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

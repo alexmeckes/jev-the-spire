@@ -1,0 +1,520 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 1,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "CHOMPER_0",
+          "combat_id": 1,
+          "name": "Chomper",
+          "hp": 64,
+          "max_hp": 64,
+          "block": 0,
+          "status": [
+            {
+              "id": "ARTIFACT_POWER",
+              "name": "Artifact",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Negates 2 debuffs.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "8x2",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 8 damage 2 times."
+            }
+          ]
+        },
+        {
+          "entity_id": "CHOMPER_1",
+          "combat_id": 2,
+          "name": "Chomper",
+          "hp": 60,
+          "max_hp": 60,
+          "block": 0,
+          "status": [
+            {
+              "id": "ARTIFACT_POWER",
+              "name": "Artifact",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Negates 2 debuffs.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "StatusCard",
+              "label": "3",
+              "title": "Strategic",
+              "description": "This enemy intends to give you 3 Status cards."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 22,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 35,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "AGGRESSION",
+          "name": "Aggression+",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it.",
+          "rarity": "Rare",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Innate",
+              "description": "Start each combat with this card in your Hand."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "EVIL_EYE",
+          "name": "Evil Eye+",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Gain another 11 Block if you have Exhausted a card this turn.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "FIGHT_ME",
+          "name": "Fight Me!",
+          "type": "Attack",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 20,
+      "discard_pile_count": 0,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Anger+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 8 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Anger+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 8 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 9 damage to ALL enemies."
+        },
+        {
+          "name": "Pommel Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 2 cards."
+        },
+        {
+          "name": "Ashen Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Flame Barrier+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 16 Block. Whenever you are attacked this turn, deal 6 damage back."
+        },
+        {
+          "name": "Rage+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 5 Block."
+        },
+        {
+          "name": "Vicious+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 2 cards."
+        },
+        {
+          "name": "Aggression",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it."
+        },
+        {
+          "name": "Cascade",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Play the top X cards of your Draw Pile."
+        },
+        {
+          "name": "Impervious",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 30 Block. Exhaust."
+        },
+        {
+          "name": "Unmovable+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "The first time you gain Block from a card each turn, double the amount gained."
+        }
+      ],
+      "discard_pile": [],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Aggression+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it."
+        },
+        {
+          "name": "Anger+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 8 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Pommel Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 2 cards."
+        },
+        {
+          "name": "Anger+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 8 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Rage+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 5 Block."
+        },
+        {
+          "name": "Cascade",
+          "cost": "X",
+          "star_cost": null,
+          "description": "Play the top X cards of your Draw Pile."
+        },
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 9 damage to ALL enemies."
+        },
+        {
+          "name": "Fight Me!",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength."
+        },
+        {
+          "name": "Ashen Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Unmovable+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "The first time you gain Block from a card each turn, double the amount gained."
+        },
+        {
+          "name": "Aggression",
+          "cost": "1",
+          "star_cost": null,
+          "description": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it."
+        },
+        {
+          "name": "Evil Eye+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Gain another 11 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Flame Barrier+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 16 Block. Whenever you are attacked this turn, deal 6 damage back."
+        },
+        {
+          "name": "Vicious+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 2 cards."
+        },
+        {
+          "name": "Impervious",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 30 Block. Exhaust."
+        }
+      ],
+      "gold": 309,
+      "status": [],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "ARCANE_SCROLL",
+          "name": "Arcane Scroll",
+          "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "HORN_CLEAT",
+          "name": "Horn Cleat",
+          "description": "At the start of your 2nd turn, gain 14 Block.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "SHURIKEN",
+          "name": "Shuriken",
+          "description": "Every time you play 3 Attacks in a single turn, gain 1 Strength.",
+          "counter": 0,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "YUMMY_COOKIE",
+          "name": "Yummy Cookie",
+          "description": "Upon pickup, Upgrade 4 cards.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [
+        {
+          "id": "FLEX_POTION",
+          "name": "Flex Potion",
+          "description": "Gain 5 Strength. At the end of your turn, lose 5 Strength.",
+          "slot": 0,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        }
+      ],
+      "max_potion_slots": 3
+    }
+  },
+  "originalChoice": "Evil Eye+",
+  "recordedAt": "2026-09-18T12:14:49.235Z"
+}

@@ -1,0 +1,609 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 4,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "BOWLBUG_SILK_0",
+          "combat_id": 2,
+          "name": "Bowlbug (Silk)",
+          "hp": 40,
+          "max_hp": 43,
+          "block": 0,
+          "status": [],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "4x2",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 4 damage 2 times."
+            }
+          ]
+        },
+        {
+          "entity_id": "BOWLBUG_NECTAR_0",
+          "combat_id": 3,
+          "name": "Bowlbug (Nectar)",
+          "hp": 35,
+          "max_hp": 38,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 15,
+              "type": "Buff",
+              "description": "Increases attack damage by 15.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "18",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 18 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 23,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 9,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "RELAX",
+          "name": "Relax",
+          "type": "Skill",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Gain 15 Block. Next turn, draw 2 cards and gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Exhaust.",
+          "rarity": "Ancient",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            },
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "SETUP_STRIKE",
+          "name": "Setup Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 5 damage. Gain 2 Strength this turn.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 4,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 5,
+      "discard_pile_count": 19,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "True Grit",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Setup Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Gain 3 Strength this turn."
+        },
+        {
+          "name": "Bash+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 12 damage. Apply 3 Vulnerable."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Thunderclap",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 3 damage and apply 1 Vulnerable to ALL enemies."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 1 card."
+        },
+        {
+          "name": "Spite+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 5 damage. If you lost HP this turn, hits 3 times."
+        },
+        {
+          "name": "Pillage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Draw cards until you draw a non-Attack card."
+        },
+        {
+          "name": "Relax",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Gain 15 Block. Next turn, draw 2 cards and gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Exhaust."
+        },
+        {
+          "name": "Uppercut+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 2 Weak. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 42 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Juggernaut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Whenever you gain Block, deal 6 damage to a random enemy."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 30 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        }
+      ],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 12 damage. Apply 3 Vulnerable."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Pillage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Draw cards until you draw a non-Attack card."
+        },
+        {
+          "name": "Thunderclap",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
+        },
+        {
+          "name": "True Grit",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Juggernaut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Whenever you gain Block, deal 6 damage to a random enemy."
+        },
+        {
+          "name": "Relax",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Gain 15 Block. Next turn, draw 2 cards and gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Exhaust."
+        },
+        {
+          "name": "Relax",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Gain 15 Block. Next turn, draw 2 cards and gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Exhaust."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Uppercut+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 2 Weak. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Spite+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 5 damage. If you lost HP this turn, hits 3 times."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        }
+      ],
+      "gold": 58,
+      "status": [
+        {
+          "id": "WEAK_POWER",
+          "name": "Weak",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "Attacks deal 25% less damage for 1 turn.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "POMANDER",
+          "name": "Pomander",
+          "description": "Upon pickup, Upgrade a card.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "SWORD_OF_STONE",
+          "name": "Sword of Stone",
+          "description": "Transforms into a powerful Relic after defeating 5 Elites.",
+          "counter": 0,
+          "keywords": []
+        },
+        {
+          "id": "VENERABLE_TEA_SET",
+          "name": "Venerable Tea Set",
+          "description": "Whenever you enter a Rest Site, start the next combat with an additional [ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "PAELS_HORN",
+          "name": "Pael's Horn",
+          "description": "Upon pickup, add 2 Relax to your Deck.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Relax",
+              "description": "Gain 15 Block. Next turn, draw 2 cards and gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Exhaust."
+            },
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            },
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ]
+        },
+        {
+          "id": "BOOK_OF_FIVE_RINGS",
+          "name": "Book of Five Rings",
+          "description": "Every 5 cards you add to your Deck, heal 20 HP.",
+          "counter": 0,
+          "keywords": []
+        }
+      ],
+      "potions": [
+        {
+          "id": "STABLE_SERUM",
+          "name": "Stable Serum",
+          "description": "Retain your Hand for 2 turns.",
+          "slot": 0,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Retain",
+              "description": "Retained cards are not discarded at the end of turn."
+            }
+          ]
+        },
+        {
+          "id": "STABLE_SERUM",
+          "name": "Stable Serum",
+          "description": "Retain your Hand for 2 turns.",
+          "slot": 1,
+          "can_use_in_combat": true,
+          "target_type": "AnyPlayer",
+          "keywords": [
+            {
+              "name": "Retain",
+              "description": "Retained cards are not discarded at the end of turn."
+            }
+          ]
+        }
+      ],
+      "max_potion_slots": 3
+    }
+  }
+}

@@ -1,0 +1,775 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 6,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "TEST_SUBJECT_0",
+          "combat_id": 1,
+          "name": "Test Subject #C8",
+          "hp": 65,
+          "max_hp": 200,
+          "block": 0,
+          "status": [
+            {
+              "id": "ADAPTABLE_POWER",
+              "name": "Adaptable",
+              "amount": 1,
+              "type": "Buff",
+              "description": "When Test Subject #C8 would be defeated, it instead revives even stronger.",
+              "keywords": []
+            },
+            {
+              "id": "PAINFUL_STABS_POWER",
+              "name": "Painful Stabs",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Shuffle 1 Wound into your Discard Pile each time you receive unblocked attack damage.",
+              "keywords": [
+                {
+                  "name": "Wound",
+                  "description": "Unplayable."
+                },
+                {
+                  "name": "Unplayable",
+                  "description": "Unplayable cards cannot be played."
+                }
+              ]
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "10x6",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 10 damage 6 times."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 3,
+      "floor": 48,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 5,
+      "max_hp": 93,
+      "block": 0,
+      "energy": 4,
+      "max_energy": 4,
+      "hand": [
+        {
+          "id": "EXPECT_A_FIGHT",
+          "name": "Expect a Fight",
+          "type": "Skill",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] for each Attack in your Hand. You cannot gain additional [ironclad_energy_icon.png] this turn. (Gain [ironclad_energy_icon.png][ironclad_energy_icon.png][ironclad_energy_icon.png])",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "COLOSSUS",
+          "name": "Colossus+",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 9 Block. You receive 50% less damage from Vulnerable enemies this turn.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BLUDGEON",
+          "name": "Bludgeon+",
+          "type": "Attack",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 45 damage.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Swift",
+              "description": "The first time you play this card, draw 3 cards."
+            }
+          ],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "SETUP_STRIKE",
+          "name": "Setup Strike+",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 12 damage. Gain 3 Strength this turn.",
+          "rarity": "Common",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 6 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 5,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 21,
+      "discard_pile_count": 9,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 6 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 28 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Hemokinesis",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 2 HP. Deal 21 damage."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Mind Blast",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. Deal damage equal to the number of cards in your Draw Pile. (Deals 40 damage)"
+        },
+        {
+          "name": "Cruelty",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Vulnerable enemies take an additional 25% damage."
+        },
+        {
+          "name": "Cruelty",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Vulnerable enemies take an additional 25% damage."
+        },
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock."
+        },
+        {
+          "name": "Colossus+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 9 Block. You receive 50% less damage from Vulnerable enemies this turn."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 9 Block. Draw 1 card."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 19 damage."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 19 damage."
+        },
+        {
+          "name": "Giant Rock",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 16 damage."
+        },
+        {
+          "name": "Wound",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Molten Fist+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 15 damage. Double the enemy's Vulnerable. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Anger",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+        },
+        {
+          "name": "Ashen Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 4 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d. Draw 3 cards the first time this is played."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Expect a Fight",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] for each Attack in your Hand. You cannot gain additional [ironclad_energy_icon.png] this turn."
+        },
+        {
+          "name": "Hemokinesis",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 2 HP. Deal 15 damage."
+        },
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock. Draw 3 cards the first time this is played."
+        },
+        {
+          "name": "Cruelty",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Vulnerable enemies take an additional 25% damage."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Bludgeon+",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 42 damage. Draw 3 cards the first time this is played."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Setup Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Gain 3 Strength this turn."
+        },
+        {
+          "name": "Cruelty",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Vulnerable enemies take an additional 25% damage."
+        },
+        {
+          "name": "Colossus+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. You receive 50% less damage from Vulnerable enemies this turn."
+        },
+        {
+          "name": "Mind Blast",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Innate. Deal damage equal to the number of cards in your Draw Pile."
+        },
+        {
+          "name": "Juggling",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Add a copy of the third Attack you play each turn into your Hand."
+        },
+        {
+          "name": "Primal Force",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Transform all Attacks in your Hand into Giant Rock."
+        },
+        {
+          "name": "Molten Fist+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 14 damage. Double the enemy's Vulnerable. Exhaust."
+        },
+        {
+          "name": "Colossus+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. You receive 50% less damage from Vulnerable enemies this turn."
+        }
+      ],
+      "gold": 33,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 3,
+          "type": "Buff",
+          "description": "Increases attack damage by 3.",
+          "keywords": []
+        },
+        {
+          "id": "DEXTERITY_POWER",
+          "name": "Dexterity",
+          "amount": 1,
+          "type": "Buff",
+          "description": "Increases Block gained from cards by 1.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "LARGE_CAPSULE",
+          "name": "Large Capsule",
+          "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "STONE_CALENDAR",
+          "name": "Stone Calendar",
+          "description": "At the end of turn 7, deal 52 damage to ALL enemies.",
+          "counter": 6,
+          "keywords": []
+        },
+        {
+          "id": "REGAL_PILLOW",
+          "name": "Regal Pillow",
+          "description": "Whenever you Rest, heal an additional 15 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "LETTER_OPENER",
+          "name": "Letter Opener",
+          "description": "Every time you play 3 Skills in a single turn, deal 5 damage to ALL enemies.",
+          "counter": 0,
+          "keywords": []
+        },
+        {
+          "id": "PENDULUM",
+          "name": "Pendulum",
+          "description": "Every 3 turns, draw 1 card.",
+          "counter": 0,
+          "keywords": []
+        },
+        {
+          "id": "PAELS_FLESH",
+          "name": "Pael's Flesh",
+          "description": "Gain an additional [ironclad_energy_icon.png] at the start of your 3rd turn, and every turn after that.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "LEES_WAFFLE",
+          "name": "Lee's Waffle",
+          "description": "Upon pickup, raise your Max HP by 7 and heal all of your HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "MR_STRUGGLES",
+          "name": "Mr. Struggles",
+          "description": "At the start of your turn, deal damage equal to the turn number to ALL enemies.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "STRAWBERRY",
+          "name": "Strawberry",
+          "description": "Upon pickup, raise your Max HP by 7.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "VAJRA",
+          "name": "Vajra",
+          "description": "Start each combat with 1 Strength.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "BEAUTIFUL_BRACELET",
+          "name": "Beautiful Bracelet",
+          "description": "Upon pickup, choose 3 cards in your Deck. Enchant them with Swift 3.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Swift",
+              "description": "The first time you play this card, draw 3 cards."
+            }
+          ]
+        },
+        {
+          "id": "PANTOGRAPH",
+          "name": "Pantograph",
+          "description": "At the start of each Boss combat, heal 25 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "ODDLY_SMOOTH_STONE",
+          "name": "Oddly Smooth Stone",
+          "description": "Start each combat with 1 Dexterity.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards."
+            }
+          ]
+        },
+        {
+          "id": "BAG_OF_MARBLES",
+          "name": "Bag of Marbles",
+          "description": "At the start of each combat, apply 1 Vulnerable to ALL enemies.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ]
+        },
+        {
+          "id": "FAKE_BLOOD_VIAL",
+          "name": "Blood Vial???",
+          "description": "At the start of each combat, heal 1 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "FAKE_LEES_WAFFLE",
+          "name": "Lee's Waffle???",
+          "description": "Upon pickup, heal 10% of your HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "FAKE_MANGO",
+          "name": "Mango???",
+          "description": "Upon pickup, raise your Max HP by 3.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "FAKE_ANCHOR",
+          "name": "Anchor???",
+          "description": "Start each combat with 4 Block.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "FAKE_ORICHALCUM",
+          "name": "Orichalcum???",
+          "description": "If you end your turn without Block, gain 3 Block.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

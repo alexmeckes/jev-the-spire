@@ -1,0 +1,446 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 10,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "KIN_PRIEST_0",
+          "combat_id": 3,
+          "name": "Kin Priest",
+          "hp": 53,
+          "max_hp": 190,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 4,
+              "type": "Buff",
+              "description": "Increases attack damage by 4.",
+              "keywords": []
+            },
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "12",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 12 damage."
+            },
+            {
+              "type": "Debuff",
+              "label": "",
+              "title": "Strategic",
+              "description": "This enemy intends to apply a Debuff to you."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 13,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 1,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "STONE_ARMOR",
+          "name": "Stone Armor",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "ARMAMENTS",
+          "name": "Armaments",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 3 Block. Upgrade a card in your Hand.",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "PILLAGE",
+          "name": "Pillage",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Draw cards until you draw a non-Attack card.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 14,
+      "discard_pile_count": 1,
+      "exhaust_pile_count": 2,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 18 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 9 damage to ALL enemies."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 34 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Molten Fist",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Double the enemy's Vulnerable. Exhaust."
+        },
+        {
+          "name": "Offering",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Lose 6 HP. Gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Draw 3 cards. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 9 damage to ALL enemies."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Bully",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 4 damage. Deals 2 additional damage for each Vulnerable on the enemy."
+        },
+        {
+          "name": "Setup Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Gain 2 Strength this turn."
+        },
+        {
+          "name": "Molten Fist",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Double the enemy's Vulnerable. Exhaust."
+        },
+        {
+          "name": "Offering",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Lose 6 HP. Gain [ironclad_energy_icon.png][ironclad_energy_icon.png]. Draw 3 cards. Exhaust."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Pillage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Draw cards until you draw a non-Attack card."
+        }
+      ],
+      "gold": 241,
+      "status": [
+        {
+          "id": "FRAIL_POWER",
+          "name": "Frail",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "Gain 25% less Block from cards for 1 turn.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "BOOMING_CONCH",
+          "name": "Booming Conch",
+          "description": "At the start of Elite combats, draw 2 additional cards and gain [ironclad_energy_icon.png].",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "TUNING_FORK",
+          "name": "Tuning Fork",
+          "description": "Every time you play 10 Skills, gain 7 Block.",
+          "counter": 0,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "PENDULUM",
+          "name": "Pendulum",
+          "description": "Every 3 turns, draw 1 card.",
+          "counter": 1,
+          "keywords": []
+        },
+        {
+          "id": "STRIKE_DUMMY",
+          "name": "Strike Dummy",
+          "description": "Cards containing \u201cStrike\u201d deal 3 additional damage.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  },
+  "originalChoice": "Strike \u2192 Kin Priest \u2192 End turn"
+}

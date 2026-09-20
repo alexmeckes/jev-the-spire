@@ -1,0 +1,562 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 5,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "THE_INSATIABLE_0",
+          "combat_id": 1,
+          "name": "The Insatiable",
+          "hp": 220,
+          "max_hp": 321,
+          "block": 0,
+          "status": [
+            {
+              "id": "SANDPIT_POWER",
+              "name": "Sandpit",
+              "amount": 1,
+              "type": "Buff",
+              "description": "When The Insatiable takes its turn, you will be eaten and die.",
+              "keywords": []
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 2,
+              "type": "Buff",
+              "description": "Increases attack damage by 2.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "10x2",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 10 damage 2 times."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 33,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 49,
+      "max_hp": 80,
+      "block": 10,
+      "energy": 0,
+      "max_energy": 4,
+      "hand": [
+        {
+          "id": "PYRE",
+          "name": "Pyre",
+          "type": "Power",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] at the start of each turn.",
+          "rarity": "Rare",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": false,
+          "unplayable_reason": "EnergyCostTooHigh"
+        }
+      ],
+      "draw_pile_count": 4,
+      "discard_pile_count": 29,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Frantic Escape",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+        },
+        {
+          "name": "Frantic Escape",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 13 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Flame Barrier",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+        },
+        {
+          "name": "Frantic Escape",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Unrelenting",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 15 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 23 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 1 card."
+        },
+        {
+          "name": "Dark Embrace",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, draw 1 card."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Ultimate Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 14 damage."
+        },
+        {
+          "name": "Taunt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Rupture+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you lose HP on your turn, gain 2 Strength."
+        },
+        {
+          "name": "Frantic Escape",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+        },
+        {
+          "name": "Frantic Escape",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Colossus+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. You receive 50% less damage from Vulnerable enemies this turn."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 1 card."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Frantic Escape",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+        },
+        {
+          "name": "Perfected Strike+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 30 damage. Deals 3 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage."
+        }
+      ],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Rupture",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you lose HP on your turn, gain 1 Strength."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Taunt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Headbutt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Flame Barrier",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Pyre",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] at the start of each turn."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Colossus+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. You receive 50% less damage from Vulnerable enemies this turn."
+        },
+        {
+          "name": "Unrelenting",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 14 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Dark Embrace",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, draw 1 card."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Ultimate Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 14 damage."
+        }
+      ],
+      "gold": 17,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 1,
+          "type": "Buff",
+          "description": "Increases attack damage by 1.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "GOLDEN_PEARL",
+          "name": "Golden Pearl",
+          "description": "Upon pickup, gain 150 Gold.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "VAJRA",
+          "name": "Vajra",
+          "description": "Start each combat with 1 Strength.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "PAELS_FLESH",
+          "name": "Pael's Flesh",
+          "description": "Gain an additional [ironclad_energy_icon.png] at the start of your 3rd turn, and every turn after that.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "RED_SKULL",
+          "name": "Red Skull",
+          "description": "While your HP is at or below 50%, you have 3 additional Strength.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "REPTILE_TRINKET",
+          "name": "Reptile Trinket",
+          "description": "Whenever you use a potion, gain 3 Strength this turn.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "GORGET",
+          "name": "Gorget",
+          "description": "At the start of each combat, gain 4 Plating.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "BAG_OF_MARBLES",
+          "name": "Bag of Marbles",
+          "description": "At the start of each combat, apply 1 Vulnerable to ALL enemies.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

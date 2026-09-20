@@ -1,0 +1,501 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 11,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "LAGAVULIN_MATRIARCH_0",
+          "combat_id": 1,
+          "name": "Lagavulin Matriarch",
+          "hp": 13,
+          "max_hp": 222,
+          "block": 0,
+          "status": [
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 2,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 2 turns.",
+              "keywords": []
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 4,
+              "type": "Buff",
+              "description": "Increases attack damage by 4.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "13x2",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 13 damage 2 times."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 9,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "SPOILS_MAP",
+          "name": "Spoils Map",
+          "type": "Quest",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. Marks a site of 600 extra Gold in the next Act.",
+          "rarity": "Quest",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Unplayable",
+              "description": "Unplayable cards cannot be played."
+            }
+          ],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": false,
+          "unplayable_reason": "HasUnplayableKeyword"
+        },
+        {
+          "id": "PYRE",
+          "name": "Pyre+",
+          "type": "Power",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png][ironclad_energy_icon.png] at the start of each turn.",
+          "rarity": "Rare",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "TAUNT",
+          "name": "Taunt+",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Apply 2 Vulnerable.",
+          "rarity": "Uncommon",
+          "is_upgraded": true,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 7,
+      "discard_pile_count": 10,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 9 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage."
+        },
+        {
+          "name": "Armaments+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade ALL cards in your Hand."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Draw 1 card."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 7 damage to ALL enemies."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 27 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Taunt+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        }
+      ],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Breakthrough",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Lose 1 HP. Deal 9 damage to ALL enemies."
+        },
+        {
+          "name": "Shrug It Off",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Draw 1 card."
+        },
+        {
+          "name": "Inflame",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 2 Strength."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Taunt+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Unrelenting+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 20 damage. The next Attack you play costs 0 [ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Shrug It Off+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 11 Block. Draw 1 card."
+        },
+        {
+          "name": "Spoils Map",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Unplayable. Marks a site of 600 extra Gold in the next Act."
+        },
+        {
+          "name": "Taunt+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Armaments+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade ALL cards in your Hand."
+        },
+        {
+          "name": "Pyre+",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png][ironclad_energy_icon.png] at the start of each turn."
+        }
+      ],
+      "gold": 170,
+      "status": [
+        {
+          "id": "DEXTERITY_POWER",
+          "name": "Dexterity",
+          "amount": -3,
+          "type": "Buff",
+          "description": "Decreases Block gained from cards by 3.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": -4,
+          "type": "Buff",
+          "description": "Decreases attack damage by 4.",
+          "keywords": []
+        },
+        {
+          "id": "PLATING_POWER",
+          "name": "Plating",
+          "amount": 3,
+          "type": "Buff",
+          "description": "At the end of your turn, gain 3 Block. Plating is reduced by 1 at the start of your turn.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "SCROLL_BOXES",
+          "name": "Scroll Boxes",
+          "description": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "TOXIC_EGG",
+          "name": "Toxic Egg",
+          "description": "Whenever you add a Skill into your Deck, Upgrade it.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "ODDLY_SMOOTH_STONE",
+          "name": "Oddly Smooth Stone",
+          "description": "Start each combat with 1 Dexterity.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards."
+            }
+          ]
+        },
+        {
+          "id": "AKABEKO",
+          "name": "Akabeko",
+          "description": "At the start of each combat, gain 8 Vigor.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Vigor",
+              "description": "Your next Attack deals additional damage."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

@@ -1,0 +1,598 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 1,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "EXOSKELETON_0",
+          "combat_id": 1,
+          "name": "Exoskeleton",
+          "hp": 25,
+          "max_hp": 25,
+          "block": 0,
+          "status": [
+            {
+              "id": "HARD_TO_KILL_POWER",
+              "name": "Hard to Kill",
+              "amount": 9,
+              "type": "Buff",
+              "description": "Reduce all damage taken and HP lost by Exoskeleton to 9.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "1x3",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 1 damage 3 times."
+            }
+          ]
+        },
+        {
+          "entity_id": "EXOSKELETON_1",
+          "combat_id": 2,
+          "name": "Exoskeleton",
+          "hp": 26,
+          "max_hp": 26,
+          "block": 0,
+          "status": [
+            {
+              "id": "HARD_TO_KILL_POWER",
+              "name": "Hard to Kill",
+              "amount": 9,
+              "type": "Buff",
+              "description": "Reduce all damage taken and HP lost by Exoskeleton to 9.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "8",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 8 damage."
+            }
+          ]
+        },
+        {
+          "entity_id": "EXOSKELETON_2",
+          "combat_id": 3,
+          "name": "Exoskeleton",
+          "hp": 24,
+          "max_hp": 24,
+          "block": 0,
+          "status": [
+            {
+              "id": "HARD_TO_KILL_POWER",
+              "name": "Hard to Kill",
+              "amount": 9,
+              "type": "Buff",
+              "description": "Reduce all damage taken and HP lost by Exoskeleton to 9.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Buff",
+              "label": "",
+              "title": "Empower",
+              "description": "This enemy intends to use a Buff."
+            }
+          ]
+        },
+        {
+          "entity_id": "EXOSKELETON_3",
+          "combat_id": 4,
+          "name": "Exoskeleton",
+          "hp": 28,
+          "max_hp": 28,
+          "block": 0,
+          "status": [
+            {
+              "id": "HARD_TO_KILL_POWER",
+              "name": "Hard to Kill",
+              "amount": 9,
+              "type": "Buff",
+              "description": "Reduce all damage taken and HP lost by Exoskeleton to 9.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "8",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 8 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 2,
+      "floor": 23,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 42,
+      "max_hp": 85,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "FEEL_NO_PAIN",
+          "name": "Feel No Pain",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STONE_ARMOR",
+          "name": "Stone Armor",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 10 damage. Eternal.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Tezcatara's Ember",
+              "description": "Costs 0, deals 3 additional damage, and gains Eternal."
+            },
+            {
+              "name": "Eternal",
+              "description": "Cannot be removed or transformed from your Deck."
+            }
+          ],
+          "index": 2,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "PILLAGE",
+          "name": "Pillage",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 7 damage. Draw cards until you draw a non-Attack card.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "MANGLE",
+          "name": "Mangle",
+          "type": "Attack",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 16 damage. Enemy loses 10 Strength this turn.",
+          "rarity": "Rare",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ],
+          "index": 4,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 22,
+      "discard_pile_count": 0,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 6 damage. Eternal."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Setup Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Gain 3 Strength this turn."
+        },
+        {
+          "name": "Sword Boomerang",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 3 damage to a random enemy 3 times."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Rage+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 5 Block."
+        },
+        {
+          "name": "Taunt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        }
+      ],
+      "discard_pile": [],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Strike",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Deal 9 damage. Eternal."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Sword Boomerang",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 3 damage to a random enemy 3 times."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Taunt",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Stone Armor",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 4 Plating."
+        },
+        {
+          "name": "Armaments",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Upgrade a card in your Hand."
+        },
+        {
+          "name": "Evil Eye",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pillage",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Draw cards until you draw a non-Attack card."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Mangle",
+          "cost": "3",
+          "star_cost": null,
+          "description": "Deal 15 damage. Enemy loses 10 Strength this turn."
+        },
+        {
+          "name": "Feel No Pain",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever a card is Exhausted, gain 3 Block."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Setup Strike+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Gain 3 Strength this turn."
+        },
+        {
+          "name": "Rage+",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 5 Block."
+        }
+      ],
+      "gold": 371,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 1,
+          "type": "Buff",
+          "description": "Increases attack damage by 1.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "SCROLL_BOXES",
+          "name": "Scroll Boxes",
+          "description": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "GIRYA",
+          "name": "Girya",
+          "description": "You can now gain Strength at Rest Sites. (3 times max)",
+          "counter": 1,
+          "keywords": [
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks."
+            }
+          ]
+        },
+        {
+          "id": "NUTRITIOUS_SOUP",
+          "name": "Nutritious Soup",
+          "description": "Upon pickup, Enchant all Strikes in your Deck with Tezcatara's Ember.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Tezcatara's Ember",
+              "description": "Costs 0, deals 3 additional damage, and gains Eternal."
+            },
+            {
+              "name": "Eternal",
+              "description": "Cannot be removed or transformed from your Deck."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}

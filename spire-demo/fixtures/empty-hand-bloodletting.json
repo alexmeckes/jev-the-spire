@@ -1,0 +1,404 @@
+{
+  "state": {
+    "state_type": "boss",
+    "battle": {
+      "round": 11,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "KIN_PRIEST_0",
+          "combat_id": 3,
+          "name": "Kin Priest",
+          "hp": 37,
+          "max_hp": 190,
+          "block": 0,
+          "status": [
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 4,
+              "type": "Buff",
+              "description": "Increases attack damage by 4.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "7x3",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 7 damage 3 times."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 17,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 5,
+      "max_hp": 80,
+      "block": 11,
+      "energy": 0,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "BLOODLETTING",
+          "name": "Bloodletting",
+          "type": "Skill",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Lose 3 HP. Gain [ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "rarity": "Common",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 5,
+      "discard_pile_count": 14,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 36 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 13 damage. Draw 1 card."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Ashen Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Deals 3 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 3 Block."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Demon Form+",
+          "cost": "3",
+          "star_cost": null,
+          "description": "At the start of your turn, gain 3 Strength."
+        },
+        {
+          "name": "Pyre",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] at the start of each turn."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 4 damage."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Neow's Fury",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 11 damage. Put up to 2 cards from your Discard Pile into your Hand. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Neow's Fury",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Put up to 2 cards from your Discard Pile into your Hand. Exhaust."
+        },
+        {
+          "name": "Ashen Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Deals 3 additional damage for each card in your Exhaust Pile."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Perfected Strike",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Deals 2 additional damage for ALL your cards containing \u201cStrike\u201d."
+        },
+        {
+          "name": "Uppercut",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+        },
+        {
+          "name": "Demon Form+",
+          "cost": "3",
+          "star_cost": null,
+          "description": "At the start of your turn, gain 3 Strength."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Pyre",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Gain [ironclad_energy_icon.png] at the start of each turn."
+        },
+        {
+          "name": "Iron Wave",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block. Deal 5 damage."
+        },
+        {
+          "name": "Bloodletting",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Lose 3 HP. Gain [ironclad_energy_icon.png][ironclad_energy_icon.png]."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        }
+      ],
+      "gold": 82,
+      "status": [
+        {
+          "id": "WEAK_POWER",
+          "name": "Weak",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "Attacks deal 25% less damage for 1 turn.",
+          "keywords": []
+        },
+        {
+          "id": "RAGE_POWER",
+          "name": "Rage",
+          "amount": 3,
+          "type": "Buff",
+          "description": "Whenever you play an Attack this turn, gain 3 Block.",
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NEOWS_TORMENT",
+          "name": "Neow's Torment",
+          "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Neow's Fury",
+              "description": "Deal 10 damage. Put up to 2 cards from your Discard Pile into your Hand. Exhaust."
+            },
+            {
+              "name": "Exhaust",
+              "description": "Removed until the end of combat."
+            }
+          ]
+        },
+        {
+          "id": "GORGET",
+          "name": "Gorget",
+          "description": "At the start of each combat, gain 4 Plating.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn."
+            },
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ]
+        },
+        {
+          "id": "UNSETTLING_LAMP",
+          "name": "Unsettling Lamp",
+          "description": "Each combat, the first time you play a card that Debuffs an enemy, double its effect.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  }
+}
