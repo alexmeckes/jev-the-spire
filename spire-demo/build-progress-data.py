@@ -41,6 +41,10 @@ assert len(rows)==len(native)==182
 out={'runs':rows,'plannerVersions':onsets,'reviewVersions':reviews,'tokenAccounting':'Sums usage on decision entries, once per decision including its aggregated review passes. Includes previews, cancelled and stale decisions when logged. Excludes offline tests and Luna tokens; failed or interrupted pipelines without a decision entry may be missing. Recorded usage is not a billing total.','totalInputTokens':sum(r['inputTokens'] for r in rows),'totalOutputTokens':sum(r['outputTokens'] for r in rows),'totalDecisions':sum(r['decisions'] for r in rows),'source':'Native run history reconciled chronologically against 182 Jev JSONL sessions. Outcomes from native win flag; floors and decisions from logs.','snapshot':'2026-09-23'}
 (base/'spire-demo/progress-site/dist/data.json').write_text(json.dumps(out,separators=(',',':')))
 with (base/'spire-demo/progress-site/dist/run-tokens.csv').open('w',newline='') as f:
- writer=csv.DictWriter(f,fieldnames=['n','start','act','floor','win','decisions','inputTokens','outputTokens','totalTokens','missingUsage'])
- writer.writeheader();writer.writerows({k:r[k] for k in writer.fieldnames} for r in rows)
+ writer=csv.DictWriter(f,fieldnames=['n','start','act','floor','win','decisions','inputTokens','outputTokens','totalTokens','missingUsage','inputCostUSD','outputCostUSD','totalCostUSD'])
+ writer.writeheader()
+ for r in rows:
+  estimated=f"{r['inputTokens']/1e6*0.042:.6f}"
+  record={**r,'inputCostUSD':estimated,'outputCostUSD':'0.000000','totalCostUSD':estimated}
+  writer.writerow({k:record[k] for k in writer.fieldnames})
 print(json.dumps({'runs':len(rows),'inputTokens':out['totalInputTokens'],'outputTokens':out['totalOutputTokens'],'meanInput':out['totalInputTokens']/len(rows),'medianInput':statistics.median(r['inputTokens'] for r in rows),'rangeInput':[min(r['inputTokens'] for r in rows),max(r['inputTokens'] for r in rows)],'winningRun':rows[-1],'missingUsage':sum(r['missingUsage'] for r in rows)},indent=2))
