@@ -1,5 +1,6 @@
 import json,datetime,collections,argparse,csv,statistics
 from pathlib import Path
+from zoneinfo import ZoneInfo
 base=Path(__file__).parent.parent
 parser=argparse.ArgumentParser(description='Build sanitized run progress and recorded token usage from local evidence.')
 parser.add_argument('--history-dir',type=Path,required=True,help='Native modded profile saves/history directory')
@@ -38,10 +39,17 @@ for idx,p in enumerate(logs):
  reason=n.get('killed_by_encounter','NONE.NONE').split('.')[-1].replace('_',' ').title()
  rows.append({'n':idx+1,'start':start,'end':end,'floor':maxfloor,'act':act,'win':n['win'],'seconds':n['run_time'],'decisions':count,'inputTokens':input_tokens,'outputTokens':output_tokens,'totalTokens':input_tokens+output_tokens,'missingUsage':missing_usage,'loggedCalls':calls,'policies':policies,'reviews':vers,'assisted':assisted,'encounter':reason if reason!='None' else ('Victory' if n['win'] else 'Unrecorded'),'bosses':bosses,'ascension':n['ascension']})
 assert len(rows)==len(native)==182
+# Publish calendar dates, never exact activity times. Retain timestamps above for matching.
+def public_date(value):
+ return datetime.datetime.fromisoformat(value.replace('Z','+00:00')).astimezone(ZoneInfo('America/New_York')).date().isoformat() if value else None
+for row in rows:
+ for key in ('start','end'):row[key]=public_date(row[key])
+for registry in (onsets,reviews):
+ for version in registry.values():version['time']=public_date(version['time'])
 out={'runs':rows,'plannerVersions':onsets,'reviewVersions':reviews,'tokenAccounting':'Sums usage on decision entries, once per decision including its aggregated review passes. Includes previews, cancelled and stale decisions when logged. Excludes offline tests and Luna tokens; failed or interrupted pipelines without a decision entry may be missing. Recorded usage is not a billing total.','totalInputTokens':sum(r['inputTokens'] for r in rows),'totalOutputTokens':sum(r['outputTokens'] for r in rows),'totalDecisions':sum(r['decisions'] for r in rows),'source':'Native run history reconciled chronologically against 182 Jev JSONL sessions. Outcomes from native win flag; floors and decisions from logs.','snapshot':'2026-09-23'}
 (base/'spire-demo/progress-site/dist/data.json').write_text(json.dumps(out,separators=(',',':')))
 with (base/'spire-demo/progress-site/dist/run-tokens.csv').open('w',newline='') as f:
- writer=csv.DictWriter(f,fieldnames=['n','start','act','floor','win','decisions','inputTokens','outputTokens','totalTokens','missingUsage','inputCostUSD','outputCostUSD','totalCostUSD'])
+ writer=csv.DictWriter(f,lineterminator='\n',fieldnames=['n','start','act','floor','win','decisions','inputTokens','outputTokens','totalTokens','missingUsage','inputCostUSD','outputCostUSD','totalCostUSD'])
  writer.writeheader()
  for r in rows:
   estimated=f"{r['inputTokens']/1e6*0.042:.6f}"
