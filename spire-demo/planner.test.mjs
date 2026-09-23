@@ -362,3 +362,32 @@ test('last-card Bloodletting exposes HP cost and lack of an energy payoff',()=>{
  assert.match(f.warnings.join(' '),/empty hand/);
  assert.equal(f.hpLoss,13);
 });
+
+test('explicit leader departure removes minion attacks without firing their revival',()=>{
+ const s=fixture('flame-barrier');
+ s.player.hp=5;s.player.block=0;s.player.energy=1;s.player.status=[];s.player.relics=[];
+ s.player.hand=[{index:0,name:'Strike',type:'Attack',cost:'1',description:'Deal 6 damage.',target_type:'AnyEnemy',can_play:true}];
+ s.battle.enemies=[{entity_id:'leader',name:'Leader',hp:6,block:0,status:[],intents:[{type:'Buff',label:''}]},{entity_id:'pet',name:'Pet',hp:30,block:0,status:[{name:'Minion',description:'Minions abandon combat without their leader.'},{name:'Illusion',description:'When this dies, it revives next turn at full HP.'}],intents:[{type:'Attack',label:'20'}]}];
+ let f=projectSequence(s,['Strike → Leader']);
+ assert.equal(f.incoming,0);assert.equal(f.survives,true);assert.equal(f.boundary,'combat_won');
+ assert.equal(f.departedMinions[0].id,'pet');assert.deepEqual(f.defeatedEnemies.map(e=>e.id),['leader']);assert.deepEqual(f.delayedDeathEffects,[]);
+ s.battle.enemies[0].hp=7;assert.equal(projectSequence(s,['Strike → Leader']).incoming,20);
+ s.battle.enemies[0].hp=6;s.battle.enemies[0].status=[{name:'Revival',description:'Revives when killed.'}];
+ f=projectSequence(s,['Strike → Leader']);assert.equal(f.incoming,20);assert.deepEqual(f.departedMinions,[]);assert.equal(f.survives,null);
+ s.battle.enemies[0].status=[];s.battle.enemies[1].status=[];
+ assert.equal(projectSequence(s,['Strike → Leader']).incoming,20);
+ s.battle.enemies[1].status=[{name:'Minion',description:'Minions abandon combat without their leader.'}];
+ s.battle.enemies.push({entity_id:'other',name:'Other',hp:20,block:0,status:[],intents:[]});
+ assert.deepEqual(projectSequence(s,['Strike → Leader']).departedMinions,[]);
+});
+
+test('positioning forecast exposes final targeted action while leaving exact damage uncertain',()=>{
+ const s=fixture('flame-barrier');
+ s.player.energy=3;s.player.status=[{name:'Surrounded',description:'Receive 50% more damage if attacked from behind. Use targeting cards or potions to change your orientation.'}];
+ s.player.hand=[{index:0,name:'Strike',type:'Attack',cost:'1',description:'Deal 6 damage.',target_type:'AnyEnemy',can_play:true},{index:1,name:'Strike',type:'Attack',cost:'1',description:'Deal 6 damage.',target_type:'AnyEnemy',can_play:true},{index:2,name:'Defend',type:'Skill',cost:'1',description:'Gain 5 Block.',target_type:'Self',can_play:true}];
+ s.battle.enemies=[{entity_id:'a',name:'Left',hp:100,block:0,status:[],intents:[{type:'Attack',label:'18'}]},{entity_id:'b',name:'Right',hp:100,block:0,status:[],intents:[{type:'Attack',label:'49'}]}];
+ const f=projectSequence(s,['Strike → Left','Strike → Right','Defend']);
+ assert.equal(f.facingReview.lastTargetedAction.command.target,'b');assert.equal(f.survives,null);assert.match(f.facingReview.note,/do not multiply displayed intents again/);
+ assert.equal(projectSequence(s,['Defend']).facingReview.lastTargetedAction,null);
+ s.player.status=[];assert.equal(projectSequence(s,['Defend']).facingReview,undefined);
+});

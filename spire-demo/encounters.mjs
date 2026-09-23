@@ -29,7 +29,7 @@ export function encounterMemory(state,events) {
  const summarize=e=>({act:e.state.run?.act,floor:e.state.run?.floor,round:e.state.battle?.round,hpBefore:e.state.player?.hp,
   enemies:e.state.battle?.enemies.map(x=>({id:x.entity_id,name:x.name,hp:x.hp,intents:x.intents})),
   action:e.chosen.plan?.[0]??{label:e.chosen.label,command:e.chosen.command},
-  jevAssessments:e.deliberation?Object.fromEntries(Object.entries(e.deliberation.assessments).map(([role,a])=>[role,{recommendation:e.candidates?.find(c=>c.id===a.choice)?.label??'unavailable',confidence:a.confidence}])):null});
+  jevAssessments:e.deliberation?Object.fromEntries(Object.entries(e.deliberation.assessments??{}).map(([role,a])=>[role,{recommendation:e.candidates?.find(c=>c.id===a.choice)?.label??'unavailable',confidence:a.confidence}])):null});
  const rounds=new Map();
  for(const e of [...fight].reverse())if(!rounds.has(e.state.battle.round))rounds.set(e.state.battle.round,e.state);
  if(state.battle && !rounds.has(state.battle.round))rounds.set(state.battle.round,state);

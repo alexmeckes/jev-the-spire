@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {projectSequence} from './planner.mjs';
+const state=()=>JSON.parse(readFileSync(new URL('./fixtures/replay-strike.json',import.meta.url))).state;
+const run=s=>projectSequence(s,['Strike → Seapunk']);
+test('recorded Replay Strike matches 26 HP loss and pays energy once',()=>{const s=state(),f=run(s);assert.equal(f.damage,26);assert.equal(f.energyLeft,s.player.energy-1);});
+test('each replay respects block and per-hit caps',()=>{const s=state();s.battle.enemies[0].block=15;assert.equal(run(s).damage,11);s.battle.enemies[0].block=0;s.battle.enemies[0].status=[{name:'Intangible',description:'Reduce all damage taken and HP loss to 1.',amount:1}];assert.equal(run(s).damage,2);});
+test('replay stops when target dies',()=>{const s=state();s.battle.enemies[0].hp=5;assert.equal(run(s).damage,5);});
+test('unsupported replay card effects are unknown rather than single-play estimates',()=>{const s=state();const c=s.player.hand.find(c=>c.description.includes('Replay'));c.description+=' Draw 1 card.';assert.equal(run(s).quality,'unknown');assert.equal(run(s).damage,null);});
+test('retaliation can kill between replayed attacks',()=>{const s=state();s.player.hp=2;s.player.block=0;s.player.status=[];s.battle.enemies[0].hp=100;s.battle.enemies[0].status=[{name:'Thorns',description:'Whenever this creature is attacked, deal 2 damage back to the attacker.',amount:2}];const f=run(s);assert.equal(f.damage,9);assert.equal(f.survives,false);});

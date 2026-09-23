@@ -1,0 +1,502 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 5,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "GAS_BOMB_0",
+          "combat_id": 3,
+          "name": "Gas Bomb",
+          "hp": 7,
+          "max_hp": 7,
+          "block": 0,
+          "status": [
+            {
+              "id": "MINION_POWER",
+              "name": "Minion",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Minions abandon combat without their leader.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "DeathBlow",
+              "label": "8",
+              "title": "Death Blow",
+              "description": "This creature is trying to take you down with it. It will attack you for 8 damage before being destroyed."
+            }
+          ]
+        },
+        {
+          "entity_id": "LIVING_FOG_0",
+          "combat_id": 1,
+          "name": "Living Fog",
+          "hp": 33,
+          "max_hp": 80,
+          "block": 0,
+          "status": [
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "8",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 8 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 7,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 60,
+      "max_hp": 87,
+      "block": 0,
+      "energy": 3,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 0,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 1,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "VICIOUS",
+          "name": "Vicious",
+          "type": "Power",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Vulnerable",
+              "description": "Vulnerable creatures take 50% more damage from Attacks."
+            }
+          ],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 3,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "RAGE",
+          "name": "Rage",
+          "type": "Skill",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 4,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 7,
+      "discard_pile_count": 5,
+      "exhaust_pile_count": 1,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Body Slam",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal damage equal to your Block. (Deals 3 damage)"
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Fight Me!",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        }
+      ],
+      "exhaust_pile": [
+        {
+          "name": "Molten Fist",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Double the enemy's Vulnerable. Exhaust."
+        }
+      ],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Dismantle",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+        },
+        {
+          "name": "Rage",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Whenever you play an Attack this turn, gain 3 Block."
+        },
+        {
+          "name": "Vicious",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Whenever you apply Vulnerable, draw 1 card."
+        },
+        {
+          "name": "Fight Me!",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength."
+        },
+        {
+          "name": "Body Slam",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal damage equal to your Block."
+        },
+        {
+          "name": "Molten Fist",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 10 damage. Double the enemy's Vulnerable. Exhaust."
+        }
+      ],
+      "gold": 9,
+      "status": [
+        {
+          "id": "SMOGGY_POWER",
+          "name": "Smoggy",
+          "amount": 1,
+          "type": "Debuff",
+          "description": "You can only play 1 Skill per turn.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "LARGE_CAPSULE",
+          "name": "Large Capsule",
+          "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "STRAWBERRY",
+          "name": "Strawberry",
+          "description": "Upon pickup, raise your Max HP by 7.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "JUZU_BRACELET",
+          "name": "Juzu Bracelet",
+          "description": "Regular enemy combats are no longer encountered in ? rooms.",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  },
+  "candidates": [
+    {
+      "id": "p9",
+      "command": {
+        "action": "play_card",
+        "card_index": 1,
+        "target": "GAS_BOMB_0"
+      },
+      "label": "Strike \u2192 Gas Bomb \u2192 Rage \u2192 Strike \u2192 Gas Bomb \u2192 Defend",
+      "details": {
+        "id": "STRIKE_IRONCLAD",
+        "name": "Strike",
+        "type": "Attack",
+        "cost": "1",
+        "star_cost": null,
+        "description": "Deal 6 damage.",
+        "rarity": "Basic",
+        "is_upgraded": false,
+        "keywords": [],
+        "index": 1,
+        "target_type": "AnyEnemy",
+        "can_play": true,
+        "unplayable_reason": null
+      },
+      "plan": [
+        {
+          "label": "Strike \u2192 Gas Bomb",
+          "command": {
+            "action": "play_card",
+            "card_index": 1,
+            "target": "GAS_BOMB_0"
+          }
+        },
+        {
+          "label": "Rage",
+          "command": {
+            "action": "play_card",
+            "card_index": 3
+          }
+        },
+        {
+          "label": "Strike \u2192 Gas Bomb",
+          "command": {
+            "action": "play_card",
+            "card_index": 2,
+            "target": "GAS_BOMB_0"
+          }
+        },
+        {
+          "label": "Defend",
+          "command": {
+            "action": "play_card",
+            "card_index": 0
+          }
+        }
+      ],
+      "forecast": {
+        "damage": 7,
+        "block": 8,
+        "incoming": 8,
+        "endTurnCardDamage": 0,
+        "endTurnCardHpLoss": 0,
+        "defeatedEnemies": [
+          {
+            "id": "GAS_BOMB_0",
+            "name": "Gas Bomb",
+            "attackRemoved": 8,
+            "deathRules": []
+          }
+        ],
+        "retaliationEvents": [],
+        "departedMinions": [],
+        "delayedDeathEffects": [],
+        "hpLoss": 0,
+        "hpAfter": 60,
+        "survives": true,
+        "bossStunned": false,
+        "bossThresholds": [],
+        "energyLeft": 0,
+        "slipperyRemoved": 0,
+        "strengthGained": 0,
+        "quality": "partial",
+        "boundary": null,
+        "warnings": [
+          "Unmodeled player power: Smoggy",
+          "Unmodeled enemy power: Minion",
+          "Unmodeled relic: Large Capsule",
+          "Unmodeled relic: Juzu Bracelet"
+        ],
+        "assumption": "Forecast if this prefix is followed by ending the turn. Known-effects estimate; unmodeled interactions are omitted when marked partial. Displayed damage intents and explicit end-of-turn damage from remaining hand; no prediction of hidden draws or future turns. Extra block from an unavailable Fan counter is omitted."
+      }
+    }
+  ]
+}

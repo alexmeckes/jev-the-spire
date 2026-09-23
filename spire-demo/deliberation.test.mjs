@@ -93,3 +93,19 @@ test('random exhaust ordering is reviewed in both Jev passes without forcing car
   return {answers:Object.fromEntries(Object.keys(p.questions).map(k=>[k,{type:'choice',choice:'attack'}]))};
  }});assert.equal(calls,2);
 });
+
+test('shop relic preference reaches both passes while preserving card and leave choices',async()=>{
+ for(const type of ['shop','fake_merchant']){
+  const shop={...structuredClone(state),state_type:type};
+  const opts=[{id:'relic',command:{action:'shop_purchase',index:0},label:'Relic',details:{}},{id:'card',command:{action:'shop_purchase',index:1},label:'Card',details:{}},{id:'leave',command:{action:'shop_leave'},label:'Leave',details:{}}];
+  let calls=0;
+  await deliberate({state:shop,candidates:opts,ask:async p=>{
+   calls++;assert.deepEqual(Object.keys(p.questions.move.criteria),['relic','card','leave']);
+   assert.match(p.questions.move.instructions,/Relic purchase preference/);
+   assert.match(p.questions.move.instructions,/subtract its price from current gold/);
+   assert.match(p.questions.move.instructions,/critical weakness can take priority/);
+   if(calls===1)assert.match(p.questions.resources.instructions,/Do not buy a weak relic/);
+   return {answers:Object.fromEntries(Object.keys(p.questions).map(k=>[k,{type:'choice',choice:'card'}]))};
+  }});assert.equal(calls,2);
+ }
+});

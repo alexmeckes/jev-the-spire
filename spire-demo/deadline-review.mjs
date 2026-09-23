@@ -1,0 +1,8 @@
+// Connect visible lethal countdown rules to cards that explicitly extend them.
+export function deadlineReview(state) {
+ if(!state.battle)return '';
+ const threats=(state.battle.enemies??[]).filter(e=>e.hp>0).flatMap(e=>(e.status??[]).filter(p=>/you will be eaten and die/i.test(p.description??'')));
+ if(!threats.length)return '';
+ const evidence=threats.map(p=>({name:p.name,rule:p.description,extensions:(state.player?.hand??[]).filter(c=>(c.description??'').toLowerCase().includes(`increase ${p.name} by`.toLowerCase())).map(c=>({name:c.name,cost:c.cost,playable:c.can_play,rule:c.description}))}));
+ return 'LETHAL COUNTDOWN: '+JSON.stringify(evidence)+'. Prioritize a playable countdown-extension card when no supported kill or interruption prevents the deadline. Reserve its current energy cost before optional attacks, block or future-turn powers. Extending this countdown buys time within the fight; it does not abandon the run or defeat the enemy. A Status card can be essential and playable: use its text, not its type as a reason to ignore it. When death is due on the next enemy turn, ordinary block or healing cannot stop that rule. Compare a line that extends the deadline AND survives ordinary attacks with an immediate supported kill. With more time remaining, compare extending now against the damage needed before expiry; do not assume the card will be available or affordable later. Re-observe the countdown and increased card cost after using it; do not assume repeated use is free or legal. A forecast marked unknown for this effect is not evidence that the extension does nothing. Future-turn powers pay off only if the deadline is handled first. Keep all candidates; Jev chooses from visible rules.';
+}

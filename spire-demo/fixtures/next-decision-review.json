@@ -1,0 +1,1592 @@
+[
+  {
+    "session": "19-20-10.478",
+    "state": {
+      "state_type": "boss",
+      "battle": {
+        "round": 1,
+        "turn": "player",
+        "is_play_phase": true,
+        "enemies": [
+          {
+            "entity_id": "KNOWLEDGE_DEMON_0",
+            "combat_id": 1,
+            "name": "Knowledge Demon",
+            "hp": 379,
+            "max_hp": 379,
+            "block": 0,
+            "status": [],
+            "intents": [
+              {
+                "type": "Debuff",
+                "label": "",
+                "title": "Strategic",
+                "description": "This enemy intends to apply a Debuff to you."
+              }
+            ]
+          }
+        ]
+      },
+      "run": {
+        "act": 2,
+        "floor": 33,
+        "ascension": 0
+      },
+      "player": {
+        "character": "The Ironclad",
+        "hp": 80,
+        "max_hp": 80,
+        "block": 0,
+        "energy": 3,
+        "max_energy": 3,
+        "hand": [
+          {
+            "id": "FLAME_BARRIER",
+            "name": "Flame Barrier+",
+            "type": "Skill",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Gain 18 Block. Whenever you are attacked this turn, deal 6 damage back.",
+            "rarity": "Uncommon",
+            "is_upgraded": true,
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ],
+            "index": 0,
+            "target_type": "Self",
+            "can_play": true,
+            "unplayable_reason": null
+          },
+          {
+            "id": "CRIMSON_MANTLE",
+            "name": "Crimson Mantle+",
+            "type": "Power",
+            "cost": "1",
+            "star_cost": null,
+            "description": "At the start of your turn, lose 1 HP and gain 10 Block.",
+            "rarity": "Rare",
+            "is_upgraded": true,
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ],
+            "index": 1,
+            "target_type": "Self",
+            "can_play": true,
+            "unplayable_reason": null
+          },
+          {
+            "id": "STRIKE_IRONCLAD",
+            "name": "Strike",
+            "type": "Attack",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage.",
+            "rarity": "Basic",
+            "is_upgraded": false,
+            "keywords": [],
+            "index": 2,
+            "target_type": "AnyEnemy",
+            "can_play": true,
+            "unplayable_reason": null
+          },
+          {
+            "id": "DEFEND_IRONCLAD",
+            "name": "Defend",
+            "type": "Skill",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 7 Block.",
+            "rarity": "Basic",
+            "is_upgraded": false,
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ],
+            "index": 3,
+            "target_type": "Self",
+            "can_play": true,
+            "unplayable_reason": null
+          },
+          {
+            "id": "DEFEND_IRONCLAD",
+            "name": "Defend",
+            "type": "Skill",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 7 Block.",
+            "rarity": "Basic",
+            "is_upgraded": false,
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ],
+            "index": 4,
+            "target_type": "Self",
+            "can_play": true,
+            "unplayable_reason": null
+          }
+        ],
+        "draw_pile_count": 25,
+        "discard_pile_count": 0,
+        "exhaust_pile_count": 0,
+        "deck": [
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Bash",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Deal 8 damage. Apply 2 Vulnerable."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Bludgeon+",
+            "cost": "3",
+            "star_cost": null,
+            "description": "Deal 42 damage."
+          },
+          {
+            "name": "Colossus+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 8 Block. You receive 50% less damage from Vulnerable enemies this turn."
+          },
+          {
+            "name": "Iron Wave",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block. Deal 5 damage."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Shrug It Off+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 11 Block. Draw 1 card."
+          },
+          {
+            "name": "Inflame+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 3 Strength."
+          },
+          {
+            "name": "Anger",
+            "cost": "0",
+            "star_cost": null,
+            "description": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+          },
+          {
+            "name": "Shrug It Off+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 11 Block. Draw 1 card."
+          },
+          {
+            "name": "Crimson Mantle+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "At the start of your turn, lose 1 HP and gain 10 Block."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Rage+",
+            "cost": "0",
+            "star_cost": null,
+            "description": "Whenever you play an Attack this turn, gain 5 Block."
+          },
+          {
+            "name": "Flame Barrier+",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Gain 16 Block. Whenever you are attacked this turn, deal 6 damage back."
+          },
+          {
+            "name": "Rampage+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 9 damage. Increase this card's damage by 9 this combat."
+          },
+          {
+            "name": "Breakthrough+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Lose 1 HP. Deal 13 damage to ALL enemies."
+          },
+          {
+            "name": "Fight Me!",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength."
+          },
+          {
+            "name": "Squash",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Apply 2 Vulnerable."
+          },
+          {
+            "name": "Thunderclap+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 7 damage and apply 1 Vulnerable to ALL enemies."
+          }
+        ],
+        "gold": 1,
+        "status": [
+          {
+            "id": "DEXTERITY_POWER",
+            "name": "Dexterity",
+            "amount": 2,
+            "type": "Buff",
+            "description": "Increases Block gained from cards by 2.",
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ]
+          }
+        ],
+        "relics": [
+          {
+            "id": "BURNING_BLOOD",
+            "name": "Burning Blood",
+            "description": "At the end of combat, heal 6 HP.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "LARGE_CAPSULE",
+            "name": "Large Capsule",
+            "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "RUINED_HELMET",
+            "name": "Ruined Helmet",
+            "description": "The first time you gain Strength each combat, double the amount gained.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks."
+              }
+            ]
+          },
+          {
+            "id": "RED_SKULL",
+            "name": "Red Skull",
+            "description": "While your HP is at or below 50%, you have 3 additional Strength.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks."
+              }
+            ]
+          },
+          {
+            "id": "KUSARIGAMA",
+            "name": "Kusarigama",
+            "description": "Every time you play 3 Attacks in a single turn, deal 6 damage to a random enemy.",
+            "counter": 0,
+            "keywords": []
+          },
+          {
+            "id": "PANTOGRAPH",
+            "name": "Pantograph",
+            "description": "At the start of each Boss combat, heal 25 HP.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "BELT_BUCKLE",
+            "name": "Belt Buckle",
+            "description": "While you have no potions, you have 2 additional Dexterity.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards."
+              }
+            ]
+          },
+          {
+            "id": "YUMMY_COOKIE",
+            "name": "Yummy Cookie",
+            "description": "Upon pickup, Upgrade 4 cards.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "MINIATURE_TENT",
+            "name": "Miniature Tent",
+            "description": "You may choose any number of options at Rest Sites.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "LUCKY_FYSH",
+            "name": "Lucky Fysh",
+            "description": "Whenever you add a card to your Deck, gain 15 Gold.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "HAPPY_FLOWER",
+            "name": "Happy Flower",
+            "description": "Every 3 turns, gain [ironclad_energy_icon.png].",
+            "counter": 1,
+            "keywords": [
+              {
+                "name": "Energy",
+                "description": "Energy is used to play cards from your Hand."
+              }
+            ]
+          }
+        ],
+        "potions": [],
+        "max_potion_slots": 3
+      }
+    },
+    "chosen": {
+      "id": "p6",
+      "command": {
+        "action": "play_card",
+        "card_index": 0
+      },
+      "label": "Flame Barrier+ \u2192 Strike \u2192 Knowledge Demon",
+      "details": {
+        "id": "FLAME_BARRIER",
+        "name": "Flame Barrier+",
+        "type": "Skill",
+        "cost": "2",
+        "star_cost": null,
+        "description": "Gain 18 Block. Whenever you are attacked this turn, deal 6 damage back.",
+        "rarity": "Uncommon",
+        "is_upgraded": true,
+        "keywords": [
+          {
+            "name": "Block",
+            "description": "Until next turn, prevents damage."
+          }
+        ],
+        "index": 0,
+        "target_type": "Self",
+        "can_play": true,
+        "unplayable_reason": null
+      },
+      "plan": [
+        {
+          "label": "Flame Barrier+",
+          "command": {
+            "action": "play_card",
+            "card_index": 0
+          }
+        },
+        {
+          "label": "Strike \u2192 Knowledge Demon",
+          "command": {
+            "action": "play_card",
+            "card_index": 1,
+            "target": "KNOWLEDGE_DEMON_0"
+          }
+        }
+      ],
+      "forecast": {
+        "damage": 6,
+        "block": 18,
+        "incoming": 0,
+        "endTurnCardDamage": 0,
+        "endTurnCardHpLoss": 0,
+        "defeatedEnemies": [],
+        "retaliationEvents": [],
+        "departedMinions": [],
+        "delayedDeathEffects": [],
+        "hpLoss": 0,
+        "hpAfter": 80,
+        "survives": true,
+        "bossStunned": false,
+        "bossThresholds": [],
+        "energyLeft": 0,
+        "slipperyRemoved": 0,
+        "strengthGained": 0,
+        "quality": "partial",
+        "boundary": null,
+        "warnings": [
+          "Unmodeled relic: Large Capsule",
+          "Unmodeled relic: Ruined Helmet",
+          "Unmodeled relic: Red Skull",
+          "Unmodeled relic: Kusarigama",
+          "Unmodeled relic: Pantograph",
+          "Unmodeled relic: Belt Buckle",
+          "Unmodeled relic: Yummy Cookie",
+          "Unmodeled relic: Miniature Tent",
+          "Unmodeled relic: Lucky Fysh",
+          "Unmodeled relic: Happy Flower",
+          "Immediate block included; retaliation damage and any kills during enemy attacks are omitted. Incoming may be overestimated."
+        ],
+        "assumption": "Forecast if this prefix is followed by ending the turn. Known-effects estimate; unmodeled interactions are omitted when marked partial. Displayed damage intents and explicit end-of-turn damage from remaining hand; no prediction of hidden draws or future turns. Extra block from an unavailable Fan counter is omitted."
+      }
+    }
+  },
+  {
+    "session": "19-20-10.478",
+    "state": {
+      "state_type": "boss",
+      "battle": {
+        "round": 12,
+        "turn": "player",
+        "is_play_phase": true,
+        "enemies": [
+          {
+            "entity_id": "KNOWLEDGE_DEMON_0",
+            "combat_id": 1,
+            "name": "Knowledge Demon",
+            "hp": 71,
+            "max_hp": 379,
+            "block": 0,
+            "status": [
+              {
+                "id": "STRENGTH_POWER",
+                "name": "Strength",
+                "amount": 5,
+                "type": "Buff",
+                "description": "Increases attack damage by 5.",
+                "keywords": []
+              }
+            ],
+            "intents": [
+              {
+                "type": "Attack",
+                "label": "16",
+                "title": "Aggressive",
+                "description": "This enemy intends to Attack for 16 damage."
+              },
+              {
+                "type": "Heal",
+                "label": "",
+                "title": "Heal",
+                "description": "This enemy intends to Heal."
+              },
+              {
+                "type": "Buff",
+                "label": "",
+                "title": "Empower",
+                "description": "This enemy intends to use a Buff."
+              }
+            ]
+          }
+        ]
+      },
+      "run": {
+        "act": 2,
+        "floor": 33,
+        "ascension": 0
+      },
+      "player": {
+        "character": "The Ironclad",
+        "hp": 7,
+        "max_hp": 80,
+        "block": 10,
+        "energy": 3,
+        "max_energy": 2,
+        "hand": [
+          {
+            "id": "STRIKE_IRONCLAD",
+            "name": "Strike",
+            "type": "Attack",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 18 damage.",
+            "rarity": "Basic",
+            "is_upgraded": false,
+            "keywords": [],
+            "index": 0,
+            "target_type": "AnyEnemy",
+            "can_play": true,
+            "unplayable_reason": null
+          },
+          {
+            "id": "BLUDGEON",
+            "name": "Bludgeon+",
+            "type": "Attack",
+            "cost": "3",
+            "star_cost": null,
+            "description": "Deal 54 damage.",
+            "rarity": "Uncommon",
+            "is_upgraded": true,
+            "keywords": [],
+            "index": 1,
+            "target_type": "AnyEnemy",
+            "can_play": true,
+            "unplayable_reason": null
+          },
+          {
+            "id": "POMMEL_STRIKE",
+            "name": "Pommel Strike+",
+            "type": "Attack",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 22 damage. Draw 2 cards.",
+            "rarity": "Common",
+            "is_upgraded": true,
+            "keywords": [],
+            "index": 2,
+            "target_type": "AnyEnemy",
+            "can_play": true,
+            "unplayable_reason": null
+          },
+          {
+            "id": "STRIKE_IRONCLAD",
+            "name": "Strike",
+            "type": "Attack",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 18 damage.",
+            "rarity": "Basic",
+            "is_upgraded": false,
+            "keywords": [],
+            "index": 3,
+            "target_type": "AnyEnemy",
+            "can_play": true,
+            "unplayable_reason": null
+          }
+        ],
+        "draw_pile_count": 27,
+        "discard_pile_count": 0,
+        "exhaust_pile_count": 0,
+        "deck": [
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Bash",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Deal 8 damage. Apply 2 Vulnerable."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Bludgeon+",
+            "cost": "3",
+            "star_cost": null,
+            "description": "Deal 42 damage."
+          },
+          {
+            "name": "Colossus+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 8 Block. You receive 50% less damage from Vulnerable enemies this turn."
+          },
+          {
+            "name": "Iron Wave",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block. Deal 5 damage."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Shrug It Off+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 11 Block. Draw 1 card."
+          },
+          {
+            "name": "Inflame+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 3 Strength."
+          },
+          {
+            "name": "Anger",
+            "cost": "0",
+            "star_cost": null,
+            "description": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+          },
+          {
+            "name": "Shrug It Off+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 11 Block. Draw 1 card."
+          },
+          {
+            "name": "Crimson Mantle+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "At the start of your turn, lose 1 HP and gain 10 Block."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Rage+",
+            "cost": "0",
+            "star_cost": null,
+            "description": "Whenever you play an Attack this turn, gain 5 Block."
+          },
+          {
+            "name": "Flame Barrier+",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Gain 16 Block. Whenever you are attacked this turn, deal 6 damage back."
+          },
+          {
+            "name": "Rampage+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 9 damage. Increase this card's damage by 9 this combat."
+          },
+          {
+            "name": "Breakthrough+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Lose 1 HP. Deal 13 damage to ALL enemies."
+          },
+          {
+            "name": "Fight Me!",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength."
+          },
+          {
+            "name": "Squash",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Apply 2 Vulnerable."
+          },
+          {
+            "name": "Thunderclap+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 7 damage and apply 1 Vulnerable to ALL enemies."
+          }
+        ],
+        "gold": 1,
+        "status": [
+          {
+            "id": "DEXTERITY_POWER",
+            "name": "Dexterity",
+            "amount": 2,
+            "type": "Buff",
+            "description": "Increases Block gained from cards by 2.",
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ]
+          },
+          {
+            "id": "MIND_ROT_POWER",
+            "name": "Mind Rot",
+            "amount": 1,
+            "type": "Debuff",
+            "description": "Draw 1 fewer card each turn.",
+            "keywords": []
+          },
+          {
+            "id": "STRENGTH_POWER",
+            "name": "Strength",
+            "amount": 12,
+            "type": "Buff",
+            "description": "Increases attack damage by 12.",
+            "keywords": []
+          },
+          {
+            "id": "SLOTH_POWER",
+            "name": "Sloth",
+            "amount": 0,
+            "type": "Debuff",
+            "description": "You cannot play more than 3 cards each turn.",
+            "keywords": []
+          },
+          {
+            "id": "CRIMSON_MANTLE_POWER",
+            "name": "Crimson Mantle",
+            "amount": 10,
+            "type": "Buff",
+            "description": "At the start of your turn, lose 1 HP and gain 10 Block.",
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ]
+          },
+          {
+            "id": "WASTE_AWAY_POWER",
+            "name": "Waste Away",
+            "amount": 1,
+            "type": "Debuff",
+            "description": "Gain 1 less [ironclad_energy_icon.png] per turn.",
+            "keywords": [
+              {
+                "name": "Energy",
+                "description": "Energy is used to play cards from your Hand."
+              }
+            ]
+          }
+        ],
+        "relics": [
+          {
+            "id": "BURNING_BLOOD",
+            "name": "Burning Blood",
+            "description": "At the end of combat, heal 6 HP.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "LARGE_CAPSULE",
+            "name": "Large Capsule",
+            "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "RUINED_HELMET",
+            "name": "Ruined Helmet",
+            "description": "The first time you gain Strength each combat, double the amount gained.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks."
+              }
+            ]
+          },
+          {
+            "id": "RED_SKULL",
+            "name": "Red Skull",
+            "description": "While your HP is at or below 50%, you have 3 additional Strength.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks."
+              }
+            ]
+          },
+          {
+            "id": "KUSARIGAMA",
+            "name": "Kusarigama",
+            "description": "Every time you play 3 Attacks in a single turn, deal 6 damage to a random enemy.",
+            "counter": 0,
+            "keywords": []
+          },
+          {
+            "id": "PANTOGRAPH",
+            "name": "Pantograph",
+            "description": "At the start of each Boss combat, heal 25 HP.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "BELT_BUCKLE",
+            "name": "Belt Buckle",
+            "description": "While you have no potions, you have 2 additional Dexterity.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards."
+              }
+            ]
+          },
+          {
+            "id": "YUMMY_COOKIE",
+            "name": "Yummy Cookie",
+            "description": "Upon pickup, Upgrade 4 cards.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "MINIATURE_TENT",
+            "name": "Miniature Tent",
+            "description": "You may choose any number of options at Rest Sites.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "LUCKY_FYSH",
+            "name": "Lucky Fysh",
+            "description": "Whenever you add a card to your Deck, gain 15 Gold.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "HAPPY_FLOWER",
+            "name": "Happy Flower",
+            "description": "Every 3 turns, gain [ironclad_energy_icon.png].",
+            "counter": 0,
+            "keywords": [
+              {
+                "name": "Energy",
+                "description": "Energy is used to play cards from your Hand."
+              }
+            ]
+          }
+        ],
+        "potions": [],
+        "max_potion_slots": 3
+      }
+    },
+    "chosen": {
+      "id": "p1",
+      "command": {
+        "action": "play_card",
+        "card_index": 1,
+        "target": "KNOWLEDGE_DEMON_0"
+      },
+      "label": "Bludgeon+ \u2192 Knowledge Demon",
+      "details": {
+        "id": "BLUDGEON",
+        "name": "Bludgeon+",
+        "type": "Attack",
+        "cost": "3",
+        "star_cost": null,
+        "description": "Deal 54 damage.",
+        "rarity": "Uncommon",
+        "is_upgraded": true,
+        "keywords": [],
+        "index": 1,
+        "target_type": "AnyEnemy",
+        "can_play": true,
+        "unplayable_reason": null
+      },
+      "plan": [
+        {
+          "label": "Bludgeon+ \u2192 Knowledge Demon",
+          "command": {
+            "action": "play_card",
+            "card_index": 1,
+            "target": "KNOWLEDGE_DEMON_0"
+          }
+        }
+      ],
+      "forecast": {
+        "damage": 54,
+        "block": 10,
+        "incoming": 16,
+        "endTurnCardDamage": 0,
+        "endTurnCardHpLoss": 0,
+        "defeatedEnemies": [],
+        "retaliationEvents": [],
+        "departedMinions": [],
+        "delayedDeathEffects": [],
+        "hpLoss": 6,
+        "hpAfter": 1,
+        "survives": true,
+        "bossStunned": false,
+        "bossThresholds": [],
+        "energyLeft": 0,
+        "slipperyRemoved": 0,
+        "strengthGained": 0,
+        "quality": "partial",
+        "boundary": "card_play_limit",
+        "warnings": [
+          "Unmodeled player power: Mind Rot",
+          "Unmodeled player power: Sloth",
+          "Unmodeled player power: Crimson Mantle",
+          "Unmodeled player power: Waste Away",
+          "Unmodeled relic: Large Capsule",
+          "Unmodeled relic: Ruined Helmet",
+          "Unmodeled relic: Red Skull",
+          "Unmodeled relic: Kusarigama",
+          "Unmodeled relic: Pantograph",
+          "Unmodeled relic: Belt Buckle",
+          "Unmodeled relic: Yummy Cookie",
+          "Unmodeled relic: Miniature Tent",
+          "Unmodeled relic: Lucky Fysh",
+          "Unmodeled relic: Happy Flower",
+          "A visible power limits card plays; re-observe legality after this card instead of assuming remaining plays."
+        ],
+        "assumption": "Forecast if this prefix is followed by ending the turn. Known-effects estimate; unmodeled interactions are omitted when marked partial. Displayed damage intents and explicit end-of-turn damage from remaining hand; no prediction of hidden draws or future turns. Extra block from an unavailable Fan counter is omitted."
+      }
+    }
+  },
+  {
+    "session": "19-20-10.478",
+    "state": {
+      "state_type": "boss",
+      "battle": {
+        "round": 12,
+        "turn": "player",
+        "is_play_phase": true,
+        "enemies": [
+          {
+            "entity_id": "KNOWLEDGE_DEMON_0",
+            "combat_id": 1,
+            "name": "Knowledge Demon",
+            "hp": 17,
+            "max_hp": 379,
+            "block": 0,
+            "status": [
+              {
+                "id": "STRENGTH_POWER",
+                "name": "Strength",
+                "amount": 5,
+                "type": "Buff",
+                "description": "Increases attack damage by 5.",
+                "keywords": []
+              }
+            ],
+            "intents": [
+              {
+                "type": "Attack",
+                "label": "16",
+                "title": "Aggressive",
+                "description": "This enemy intends to Attack for 16 damage."
+              },
+              {
+                "type": "Heal",
+                "label": "",
+                "title": "Heal",
+                "description": "This enemy intends to Heal."
+              },
+              {
+                "type": "Buff",
+                "label": "",
+                "title": "Empower",
+                "description": "This enemy intends to use a Buff."
+              }
+            ]
+          }
+        ]
+      },
+      "run": {
+        "act": 2,
+        "floor": 33,
+        "ascension": 0
+      },
+      "player": {
+        "character": "The Ironclad",
+        "hp": 7,
+        "max_hp": 80,
+        "block": 10,
+        "energy": 0,
+        "max_energy": 2,
+        "hand": [
+          {
+            "id": "STRIKE_IRONCLAD",
+            "name": "Strike",
+            "type": "Attack",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 18 damage.",
+            "rarity": "Basic",
+            "is_upgraded": false,
+            "keywords": [],
+            "index": 0,
+            "target_type": "AnyEnemy",
+            "can_play": false,
+            "unplayable_reason": "EnergyCostTooHigh"
+          },
+          {
+            "id": "POMMEL_STRIKE",
+            "name": "Pommel Strike+",
+            "type": "Attack",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 22 damage. Draw 2 cards.",
+            "rarity": "Common",
+            "is_upgraded": true,
+            "keywords": [],
+            "index": 1,
+            "target_type": "AnyEnemy",
+            "can_play": false,
+            "unplayable_reason": "EnergyCostTooHigh"
+          },
+          {
+            "id": "STRIKE_IRONCLAD",
+            "name": "Strike",
+            "type": "Attack",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 18 damage.",
+            "rarity": "Basic",
+            "is_upgraded": false,
+            "keywords": [],
+            "index": 2,
+            "target_type": "AnyEnemy",
+            "can_play": false,
+            "unplayable_reason": "EnergyCostTooHigh"
+          }
+        ],
+        "draw_pile_count": 27,
+        "discard_pile_count": 1,
+        "exhaust_pile_count": 0,
+        "deck": [
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Bash",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Deal 8 damage. Apply 2 Vulnerable."
+          },
+          {
+            "name": "Strike",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 6 damage."
+          },
+          {
+            "name": "Defend",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block."
+          },
+          {
+            "name": "Bludgeon+",
+            "cost": "3",
+            "star_cost": null,
+            "description": "Deal 42 damage."
+          },
+          {
+            "name": "Colossus+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 8 Block. You receive 50% less damage from Vulnerable enemies this turn."
+          },
+          {
+            "name": "Iron Wave",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 5 Block. Deal 5 damage."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Shrug It Off+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 11 Block. Draw 1 card."
+          },
+          {
+            "name": "Inflame+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 3 Strength."
+          },
+          {
+            "name": "Anger",
+            "cost": "0",
+            "star_cost": null,
+            "description": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+          },
+          {
+            "name": "Shrug It Off+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Gain 11 Block. Draw 1 card."
+          },
+          {
+            "name": "Crimson Mantle+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "At the start of your turn, lose 1 HP and gain 10 Block."
+          },
+          {
+            "name": "Pommel Strike+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Draw 2 cards."
+          },
+          {
+            "name": "Rage+",
+            "cost": "0",
+            "star_cost": null,
+            "description": "Whenever you play an Attack this turn, gain 5 Block."
+          },
+          {
+            "name": "Flame Barrier+",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Gain 16 Block. Whenever you are attacked this turn, deal 6 damage back."
+          },
+          {
+            "name": "Rampage+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 9 damage. Increase this card's damage by 9 this combat."
+          },
+          {
+            "name": "Breakthrough+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Lose 1 HP. Deal 13 damage to ALL enemies."
+          },
+          {
+            "name": "Fight Me!",
+            "cost": "2",
+            "star_cost": null,
+            "description": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength."
+          },
+          {
+            "name": "Squash",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 10 damage. Apply 2 Vulnerable."
+          },
+          {
+            "name": "Thunderclap+",
+            "cost": "1",
+            "star_cost": null,
+            "description": "Deal 7 damage and apply 1 Vulnerable to ALL enemies."
+          }
+        ],
+        "gold": 1,
+        "status": [
+          {
+            "id": "DEXTERITY_POWER",
+            "name": "Dexterity",
+            "amount": 2,
+            "type": "Buff",
+            "description": "Increases Block gained from cards by 2.",
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ]
+          },
+          {
+            "id": "MIND_ROT_POWER",
+            "name": "Mind Rot",
+            "amount": 1,
+            "type": "Debuff",
+            "description": "Draw 1 fewer card each turn.",
+            "keywords": []
+          },
+          {
+            "id": "STRENGTH_POWER",
+            "name": "Strength",
+            "amount": 12,
+            "type": "Buff",
+            "description": "Increases attack damage by 12.",
+            "keywords": []
+          },
+          {
+            "id": "SLOTH_POWER",
+            "name": "Sloth",
+            "amount": 1,
+            "type": "Debuff",
+            "description": "You cannot play more than 3 cards each turn.",
+            "keywords": []
+          },
+          {
+            "id": "CRIMSON_MANTLE_POWER",
+            "name": "Crimson Mantle",
+            "amount": 10,
+            "type": "Buff",
+            "description": "At the start of your turn, lose 1 HP and gain 10 Block.",
+            "keywords": [
+              {
+                "name": "Block",
+                "description": "Until next turn, prevents damage."
+              }
+            ]
+          },
+          {
+            "id": "WASTE_AWAY_POWER",
+            "name": "Waste Away",
+            "amount": 1,
+            "type": "Debuff",
+            "description": "Gain 1 less [ironclad_energy_icon.png] per turn.",
+            "keywords": [
+              {
+                "name": "Energy",
+                "description": "Energy is used to play cards from your Hand."
+              }
+            ]
+          }
+        ],
+        "relics": [
+          {
+            "id": "BURNING_BLOOD",
+            "name": "Burning Blood",
+            "description": "At the end of combat, heal 6 HP.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "LARGE_CAPSULE",
+            "name": "Large Capsule",
+            "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "RUINED_HELMET",
+            "name": "Ruined Helmet",
+            "description": "The first time you gain Strength each combat, double the amount gained.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks."
+              }
+            ]
+          },
+          {
+            "id": "RED_SKULL",
+            "name": "Red Skull",
+            "description": "While your HP is at or below 50%, you have 3 additional Strength.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks."
+              }
+            ]
+          },
+          {
+            "id": "KUSARIGAMA",
+            "name": "Kusarigama",
+            "description": "Every time you play 3 Attacks in a single turn, deal 6 damage to a random enemy.",
+            "counter": 1,
+            "keywords": []
+          },
+          {
+            "id": "PANTOGRAPH",
+            "name": "Pantograph",
+            "description": "At the start of each Boss combat, heal 25 HP.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "BELT_BUCKLE",
+            "name": "Belt Buckle",
+            "description": "While you have no potions, you have 2 additional Dexterity.",
+            "counter": null,
+            "keywords": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards."
+              }
+            ]
+          },
+          {
+            "id": "YUMMY_COOKIE",
+            "name": "Yummy Cookie",
+            "description": "Upon pickup, Upgrade 4 cards.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "MINIATURE_TENT",
+            "name": "Miniature Tent",
+            "description": "You may choose any number of options at Rest Sites.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "LUCKY_FYSH",
+            "name": "Lucky Fysh",
+            "description": "Whenever you add a card to your Deck, gain 15 Gold.",
+            "counter": null,
+            "keywords": []
+          },
+          {
+            "id": "HAPPY_FLOWER",
+            "name": "Happy Flower",
+            "description": "Every 3 turns, gain [ironclad_energy_icon.png].",
+            "counter": 0,
+            "keywords": [
+              {
+                "name": "Energy",
+                "description": "Energy is used to play cards from your Hand."
+              }
+            ]
+          }
+        ],
+        "potions": [],
+        "max_potion_slots": 3
+      }
+    },
+    "chosen": {
+      "id": "p0",
+      "command": {
+        "action": "end_turn"
+      },
+      "label": "End turn",
+      "details": {},
+      "plan": [
+        {
+          "label": "End turn",
+          "command": {
+            "action": "end_turn"
+          }
+        }
+      ],
+      "forecast": {
+        "damage": 0,
+        "block": 10,
+        "incoming": 16,
+        "endTurnCardDamage": 0,
+        "endTurnCardHpLoss": 0,
+        "defeatedEnemies": [],
+        "retaliationEvents": [],
+        "departedMinions": [],
+        "delayedDeathEffects": [],
+        "hpLoss": 6,
+        "hpAfter": 1,
+        "survives": true,
+        "bossStunned": false,
+        "bossThresholds": [],
+        "energyLeft": 0,
+        "slipperyRemoved": 0,
+        "strengthGained": 0,
+        "quality": "partial",
+        "boundary": "end_turn",
+        "warnings": [
+          "Unmodeled player power: Mind Rot",
+          "Unmodeled player power: Sloth",
+          "Unmodeled player power: Crimson Mantle",
+          "Unmodeled player power: Waste Away",
+          "Unmodeled relic: Large Capsule",
+          "Unmodeled relic: Ruined Helmet",
+          "Unmodeled relic: Red Skull",
+          "Unmodeled relic: Kusarigama",
+          "Unmodeled relic: Pantograph",
+          "Unmodeled relic: Belt Buckle",
+          "Unmodeled relic: Yummy Cookie",
+          "Unmodeled relic: Miniature Tent",
+          "Unmodeled relic: Lucky Fysh",
+          "Unmodeled relic: Happy Flower"
+        ],
+        "assumption": "Forecast if this prefix is followed by ending the turn. Known-effects estimate; unmodeled interactions are omitted when marked partial. Displayed damage intents and explicit end-of-turn damage from remaining hand; no prediction of hidden draws or future turns. Extra block from an unavailable Fan counter is omitted."
+      }
+    }
+  }
+]

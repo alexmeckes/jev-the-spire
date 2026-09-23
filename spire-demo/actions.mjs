@@ -6,6 +6,8 @@ export function fingerprint(state) {
 
 // Every selectable answer is constructed from the current game state. Jev
 // chooses an ID; it never supplies arbitrary HTTP endpoints or action arguments.
+// Explicit user exclusion: never acquire Sword of Stone.
+const excludedRelic = x => [x.name,x.relic_name,x.id,x.relic_id].some(v => /^(?:the )?sword(?: of| and the) stone$/i.test(String(v??'').replaceAll('_',' ')));
 export function actionsFor(s) {
   const out = [];
   const add = (action, args = {}, label = action, details = {}) =>
@@ -47,18 +49,18 @@ export function actionsFor(s) {
       break;
     case 'event':
       if (s.event?.in_dialogue) add('advance_dialogue', {}, 'Advance dialogue');
-      else list(s.event?.options, 'choose_event_option', 'index', x => !x.is_locked);
+      else list(s.event?.options, 'choose_event_option', 'index', x => !x.is_locked && !/\b(?:obtain|gain|receive|take) (?:the )?sword of stone\b/i.test(x.description??''));
       break;
     case 'rewards': {
       const beltFull = (s.player?.potions?.length ?? 0) >= (s.player?.max_potion_slots ?? 3);
-      list(s.rewards?.items, 'claim_reward', 'index', x => x.type !== 'potion' || !beltFull);
+      list(s.rewards?.items, 'claim_reward', 'index', x => !excludedRelic(x) && (x.type !== 'potion' || !beltFull));
       // Collect rewards before proceeding; choosing a card still allows skipping.
       if (!out.length) proceed(s.rewards?.can_proceed);
       break;
     }
     case 'card_reward':
       list(s.card_reward?.cards, 'select_card_reward', 'card_index');
-      if (s.card_reward?.can_skip) add('skip_card_reward', {}, 'Skip: keep the deck lean');
+      if (s.card_reward?.can_skip) add('skip_card_reward', {}, 'Skip');
       break;
     case 'rest_site':
       list(s.rest_site?.options, 'choose_rest_option', 'index', x => x.is_enabled);
@@ -67,7 +69,7 @@ export function actionsFor(s) {
       const shop = s.shop ?? s.fake_merchant?.shop;
       const full = (s.player?.potions?.length ?? 0) >= (s.player?.max_potion_slots ?? 3);
       for (const item of shop?.items ?? []) {
-        if (!item.is_stocked || !item.can_afford || (item.category === 'potion' && full)) continue;
+        if (excludedRelic(item) || !item.is_stocked || !item.can_afford || (item.category === 'potion' && full)) continue;
         const name = item.card_name ?? item.relic_name ?? item.potion_name ?? item.name ?? (item.category === 'card_removal' ? 'Remove a card' : item.category);
         add('shop_purchase', {index:item.index}, `${name} — ${item.price} gold`, {...item, gold_after_purchase:(s.player?.gold ?? 0)-item.price});
       }
@@ -76,7 +78,7 @@ export function actionsFor(s) {
       proceed(shop?.can_proceed || (Array.isArray(shop?.items) && !shop?.error)); break;
     }
     case 'treasure':
-      list(s.treasure?.relics, 'claim_treasure_relic');
+      list(s.treasure?.relics, 'claim_treasure_relic', 'index', x=>!excludedRelic(x));
       if (!out.length) proceed(s.treasure?.can_proceed);
       break;
     case 'hand_select': {
@@ -100,7 +102,7 @@ export function actionsFor(s) {
       else list(s.bundle_select?.bundles, 'select_bundle');
       break;
     case 'relic_select':
-      list(s.relic_select?.relics, 'select_relic');
+      list(s.relic_select?.relics, 'select_relic', 'index', x=>!excludedRelic(x));
       if (s.relic_select?.can_skip) add('skip_relic_selection', {}, 'Skip relic');
       break;
     // Menus and unknown overlays stop safely instead of abandoning a save,

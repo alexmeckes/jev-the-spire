@@ -1,0 +1,12 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {nextDecisionForecast,setupEvidence} from './next-decision.mjs';
+const evidence=JSON.parse(readFileSync(new URL('../fixtures/next-decision-review.json',import.meta.url)));
+const fatal=evidence.find(x=>x.session==='19-20-10.478'&&x.chosen.command.action==='end_turn');
+const opening=evidence.find(x=>x.session==='19-20-10.478'&&x.state.battle.round===1);
+test('recorded 1 HP survival fails known 1 HP upkeep',()=>{const f=nextDecisionForecast(fatal.state,fatal.chosen.forecast);assert.equal(f.survives,true);assert.equal(f.nextDecision.hpAfterKnownUpkeep,0);assert.equal(f.nextDecision.survivesKnownUpkeep,false);});
+test('no upkeep and enough HP are controls',()=>{const s=structuredClone(fatal.state);s.player.status=[];assert.equal(nextDecisionForecast(s,fatal.chosen.forecast).nextDecision.survivesKnownUpkeep,true);assert.equal(nextDecisionForecast(fatal.state,{...fatal.chosen.forecast,hpAfter:2}).nextDecision.survivesKnownUpkeep,true);});
+test('combat-ending kill does not charge another combat turn',()=>{const f={...fatal.chosen.forecast,defeatedEnemies:[{id:fatal.state.battle.enemies[0].entity_id}]};assert.equal(nextDecisionForecast(fatal.state,f).nextDecision.knownStartTurnHpLoss,0);});
+test('unknown and unresolved death effects remain unknown',()=>{for(const change of [{hpAfter:null},{quality:'unknown'},{delayedDeathEffects:[{rule:'revives'}]}])assert.equal(nextDecisionForecast(fatal.state,{...fatal.chosen.forecast,...change}).nextDecision.survivesKnownUpkeep,null);});
+test('non-attacking setup evidence retains the visible cost; attacking control does not trigger',()=>{const e=setupEvidence(opening.state);assert.ok(e.setupOptions.some(c=>c.name==='Crimson Mantle+'&&/lose 1 HP/.test(c.rule)));assert.equal(setupEvidence(fatal.state),null);});

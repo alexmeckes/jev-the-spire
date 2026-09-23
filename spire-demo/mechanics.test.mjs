@@ -21,7 +21,7 @@ test('mechanics rules and lethal prefix review survive compacting in both Jev pa
   assert.match(p.questions.move.instructions,/energy-then-draw/);
   assert.deepEqual(Object.keys(p.questions.move.criteria),candidates.map(c=>c.id));
   return {answers:Object.fromEntries(Object.keys(p.questions).map(k=>[k,{type:'choice',choice:candidates[0].id}]))};
- }});assert.equal(calls,2);
+ }});assert.equal(calls,3);
 });
 
 test('self-destruction timing is supplied from visible intent without a named guide',()=>{

@@ -11,3 +11,19 @@ The optional [deck-state patch](../spire-demo/vendor/deck-state.patch) exposes t
 On macOS the mods directory is inside `SlayTheSpire2.app/Contents/MacOS/mods/`. Enable mods in the game. Use a normal singleplayer run; compatibility with other gameplay mods is not established.
 
 The vendored [API reference](../spire-demo/vendor/api-reference.md) documents the bridge contract used during development. Upstream and game versions may differ.
+
+## Verified build used for the first win
+
+Checked September 23, 2026: the installed mod DLL and local Release build are byte-identical. The build checkout is upstream `55e064850a68f3b4cde7e5fd525bf9b2dec4e885` plus exactly the vendored `deck-state.patch`. The repository patch matches the local source diff. The DLL SHA-256 is `a5bebf899d3ce0f0c788f9bd14a0a1e1b368e2e0cf08434b4b3684245dbf9886` (provenance for this build; rebuilding on another SDK need not produce an identical binary).
+
+To reproduce the source and build with .NET 9:
+
+```sh
+git clone https://github.com/Gennadiyev/STS2MCP.git
+cd STS2MCP
+git checkout 55e064850a68f3b4cde7e5fd525bf9b2dec4e885
+git apply /path/to/jev-the-spire/spire-demo/vendor/deck-state.patch
+dotnet build STS2_MCP.csproj -c Release -p:STS2GameDir="/path/to/Slay the Spire 2"
+```
+
+Install the resulting `bin/Release/net9.0/STS2_MCP.dll` and upstream `mod_manifest.json` (renamed `STS2_MCP.json`) following upstream installation instructions. Quit the game before replacing its mod files. The game assemblies are read from your own game installation and are not redistributed here. Nothing in the visualizer requires running or changing the mod.

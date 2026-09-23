@@ -1,8 +1,14 @@
+import {facingState} from './facing.mjs';
 import {selectionState} from './selections.mjs';
 import {encounterBrief,encounterMemory} from './encounters.mjs';
 import http from 'node:http';
 import {rewardState} from './rewards.mjs';
 import {deliberate} from './deliberation.mjs';
+import {planBenefitDeliberate,persistentPlan} from './plan-benefit.mjs';
+const planBenefitEnabled=process.env.SPIRE_PLAN_BENEFIT==='1';
+import {assistedDeliberate} from './experiment/assisted.mjs';
+const lunaEnabled=process.env.SPIRE_ADVISER==='luna';
+if(lunaEnabled&&planBenefitEnabled)throw Error('Choose one experiment at a time: Luna or plan-benefit.');
 import { readFile, mkdir, appendFile, writeFile, rename } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
@@ -32,6 +38,8 @@ const view = {
   events: [], sessionId, maxDecisions: MAX_DECISIONS, maxInputTokens: MAX_INPUT_TOKENS,
 };
 if (saved) Object.assign(view, saved, { mode: 'paused', connected: false, configured: Boolean(apiKey), maxDecisions: MAX_DECISIONS, maxInputTokens: MAX_INPUT_TOKENS, message: 'Session restored. Press Autoplay to resume.' });
+view.planBenefitEnabled=planBenefitEnabled;
+view.adviser=lunaEnabled?'gpt-5.6-luna:max':null;
 let generation = 0, busy = false, lastExecuted = '', latestState = null, waitingSince = 0, nextDecisionAt = 0;
 async function log(event) {
   const entry = { time: new Date().toISOString(), ...event };
@@ -66,7 +74,7 @@ function sidecarView(source = view) {
     };
   };
   const compactDecisions = decisions.map(compact);
-  return { review: source.review ?? null, policy: POLICY_VERSION, mode: source.mode, message: source.message, connected: source.connected, pending: source.pending ?? null,
+  return { adviser:source.adviser, review: source.review ?? null, policy: POLICY_VERSION, mode: source.mode, message: source.message, connected: source.connected, pending: source.pending ?? null,
     model: source.model, actions: source.actions, inputTokens: source.inputTokens, run: source.state?.run,
     player: source.state?.player ? { hp: source.state.player.hp, maxHp: source.state.player.max_hp, energy: source.state.player.energy, block: source.state.player.block } : null,
     room: source.state?.state_type, decisions: compactDecisions.slice(0, 8), spotlight: compactDecisions.find(e => e.options.length > 1) ?? compactDecisions[0] ?? null };
@@ -96,7 +104,8 @@ async function step(token, preview = false) {
     if (['menu', 'overlay'].includes(s.state_type)) {
       stop(`Waiting at ${s.state_type}. Resolve this screen in the game, then resume.`); return;
     }
-    const actions = decisionCandidates(rewardState(s,view.events));
+    const planningState=facingState(s,view.events);
+    const actions = decisionCandidates(rewardState(planningState,view.events));
     if (!actions.length) {
       waitingSince ||= Date.now();
       if (Date.now() - waitingSince > 45000) stop('No playable actions for 45 seconds. Check the game screen, then resume.');
@@ -124,7 +133,8 @@ async function step(token, preview = false) {
     view.pending = { startedAt: Date.now(), options: actions.length };
     const start = performance.now();
     const memory=encounterMemory(s,view.events);
-    const result = await deliberate({state:s,candidates:actions,
+    if(planBenefitEnabled)memory.persistentPlan=persistentPlan(s,view.events);
+    const result = await (lunaEnabled?assistedDeliberate:planBenefitEnabled?planBenefitDeliberate:deliberate)({state:planningState,candidates:actions,
       recent:memory,
       onStage:stage=>{view.message=stage;view.pending.stage=stage;},
       ask:async payload=>{
@@ -144,7 +154,7 @@ async function step(token, preview = false) {
     const answer = result.answers?.move;
     const chosen = actions.find(a => a.id === answer?.choice);
     if (!chosen || answer?.type !== 'choice') throw new Error('Jev returned an invalid action ID.');
-    const event = { kind: 'decision', policy: POLICY_VERSION, memory, deliberation:result.deliberation, state: s, chosen, candidates: actions, answer, model: result.model, usage: result.usage, latencyMs: view.latencyMs, preview };
+    const event = { kind: 'decision', adviser:result.adviser??null, runAdviser:view.adviser, policy: POLICY_VERSION, memory, deliberation:result.deliberation, state: s, chosen, candidates: actions, answer, model: result.model, usage: result.usage, latencyMs: view.latencyMs, preview };
     if (token !== generation) { await log({ ...event, outcome: 'cancelled' }); return; }
     if (preview) { await log({ ...event, outcome: 'preview' }); view.message = `Preview: ${chosen.label}`; return; }
     const fresh = await observe();

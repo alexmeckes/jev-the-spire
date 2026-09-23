@@ -5,9 +5,10 @@
   "description": "Watch TypeSafe Jev play Slay the Spire 2",
   "scripts": {
     "start": "node spire-demo/server.mjs",
-    "test": "node --test spire-demo/*.test.mjs",
+    "test": "node --test spire-demo/*.test.mjs spire-demo/experiment/*.test.mjs",
     "report": "node spire-demo/report.mjs",
-    "benchmark:dry": "node spire-demo/benchmark/run.mjs --dry-run"
+    "benchmark:dry": "node spire-demo/benchmark/run.mjs --dry-run",
+    "progress": "python3 -m http.server 4390 --bind 127.0.0.1 --directory spire-demo/progress-site/dist"
   },
   "engines": {
     "node": ">=22"

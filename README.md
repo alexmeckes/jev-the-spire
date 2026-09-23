@@ -4,7 +4,7 @@ Watch **TypeSafe Jev play Slay the Spire 2** on your computer.
 
 Jev chooses cards, targets, rewards, routes, and purchases. A local dashboard shows its choices, competing options, and estimated outcomes. You can preview a decision, play one move, or turn on autoplay.
 
-This is an experiment, not a solved-game bot. It still makes mistakes and loses runs.
+This is an experiment, not a solved-game bot. Its first verified Ironclad Ascension 0 victory came on archived run #182; that history spans multiple policy versions and is not a current-policy win-rate estimate.
 
 ## What you need
 
@@ -63,6 +63,20 @@ Your key stays on the local server. Game observations, candidate plans, and rece
 The server binds to localhost. Keep the game bridge local too. Default session limits are 2,000 decisions and 10 million input tokens; override `MAX_DECISIONS` or `MAX_INPUT_TOKENS` if needed. Displayed costs are estimates, not a billing meter.
 
 Restarting restores the previous session **paused**. After a finished run, stop the server and rename `.private/spire-runs/session.json` to archive it before starting a separate session. Autoplay does not automatically start a new match after defeat.
+
+## Progress visualizer
+
+[**Jev — The Climb**](https://jev-the-climb.alex900731.chatgpt.site) is the owner-private hosted dashboard. The complete static visualizer and sanitized 182-run snapshot are included in [spire-demo/progress-site](spire-demo/progress-site). You can view them locally without a Sites account:
+
+```sh
+npm run progress
+```
+
+Open http://127.0.0.1:4390. Explore floors, strategy changes, individual run details, and recorded input/output token usage. Download the per-run CSV from the page. See [progress and accounting notes](docs/progress.md) for how the data is produced and what the totals exclude.
+
+## Current baseline
+
+The synced player uses `jev-visible-v23-retaliation` and `jev-visible-review-v24-card-order`: visible facing and deadline checks, deck evidence, retaliation forecasts, card-order review, and request compaction. Sword in Stone remains excluded. Leave `SPIRE_ADVISER` and `SPIRE_PLAN_BENEFIT` unset for baseline Jev. Optional experiment code is included for reproducibility and disabled by default; it is not part of the winning run's configuration.
 
 ## Tests
 

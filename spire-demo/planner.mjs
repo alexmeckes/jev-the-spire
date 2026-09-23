@@ -1,3 +1,5 @@
+import {retaliationRule,applyRetaliation} from './retaliation.mjs';
+import {facingDamage} from './facing.mjs';
 import {potionTiming} from './potion-timing.mjs';
 import {spendingRoutes} from './routes.mjs';
 import {mechanicsReview} from './mechanics.mjs';
@@ -5,7 +7,7 @@ import {setupLinks} from './setup-links.mjs';
 import {encounterBrief,deckSnapshot,visibleState} from './encounters.mjs';
 import { actionsFor, factsFor, makeQuestion } from './actions.mjs';
 
-export const POLICY_VERSION = 'jev-visible-v20-exhaust-threshold';
+export const POLICY_VERSION = 'jev-visible-v23-retaliation';
 const amount = (powers, name) => (powers ?? []).filter(p => p.name?.toLowerCase() === name.toLowerCase()).reduce((n,p) => n + Number(p.amount ?? 0), 0);
 const number = (text, regex, fallback = 0) => Number(text.match(regex)?.[1] ?? fallback);
 const nameOf = c => (c.name ?? '').replace(/\+$/, '').toLowerCase();
@@ -18,12 +20,14 @@ const knownRelics = new Set(['BURNING_BLOOD','VAJRA','GORGET','ORNAMENTAL_FAN','
 function initial(s) {
   const warnings = [];
   for (const p of s.player.status ?? []) if (!knownPlayerPowers.has(p.name.toLowerCase())) warnings.push(`Unmodeled player power: ${p.name}`);
-  for (const e of s.battle.enemies) for (const p of e.status ?? []) if (!knownEnemyPowers.has(p.name.toLowerCase())) warnings.push(`Unmodeled enemy power: ${p.name}`);
+  for (const e of s.battle.enemies) for (const p of e.status ?? []) if (!knownEnemyPowers.has(p.name.toLowerCase()) && retaliationRule(p)?.damage==null) warnings.push(`Unmodeled enemy power: ${p.name}`);
   for (const r of s.player.relics ?? []) if (!knownRelics.has(r.id)) warnings.push(`Unmodeled relic: ${r.name}`);
   const fan = (s.player.relics ?? []).find(r => r.id === 'ORNAMENTAL_FAN');
   const fanProgress = Number.isInteger(fan?.counter) ? fan.counter : null;
   if (fan && fanProgress === null) warnings.push('Ornamental Fan counter unavailable: forecast omits its extra block.');
   return {
+    retaliationEvents:[],
+    retaliationModifiers:(s.player.status??[]).some(p=>!['strength','dexterity','weak','frail','no energy gain','no draw','free attack'].includes(p.name.toLowerCase())),
     colossus:amount(s.player.status,'Colossus')>0,
     noEnergyGain:amount(s.player.status,'No Energy Gain')>0,
     exhaustCount:s.player.exhaust_pile_count ?? s.player.exhaust_pile?.length ?? 0,
@@ -107,6 +111,14 @@ function apply(m0, a) {
     m.warnings.push(`Re-observe after ${item.name}; full consequences are not modeled.`);
     return m;
   }
+  const replayCount = !potion ? number(text,/\bReplay (\d+)\b/i) : 0;
+  // Only the fully understood plain Strike replay is modeled. Other replayed
+  // effects may draw, change costs, exhaust, or alter targets between plays.
+  if(replayCount && (name!=='strike' || !/^Deal \d+ damage\.\s*Replay \d+\.?$/i.test(text.trim()) || replayCount>10 || m.freeAttack || m.ringing)) {
+    m.unsupported=true;m.boundary='unsupported';
+    m.warnings.push('Replay effects require a fresh observation; this card or play-limit interaction is not modeled.');
+    return m;
+  }
   const spent = potion ? 0 : cost(item,m);
   if (spent > m.energy) return null;
   m.energy -= spent;
@@ -127,6 +139,9 @@ function apply(m0, a) {
   }
   const isAttack = !potion && item.type === 'Attack';
   const targets = item.target_type === 'AnyEnemy' ? m.enemies.filter(e => e.entity_id === a.command.target) : m.enemies.filter(e => e.hp > 0);
+  for(let replay=0;replay<=replayCount;replay++){
+  if(replay && (m.hp<=0 || targets.every(e=>e.hp<=0)))break;
+  let retaliationHits=0;
   const damageMatch = name==='flame barrier' ? null : name==='mind blast' ? [null,String(m.drawCount)] : text.match(/Deal (\d+) damage/i);
   if (damageMatch) {
     let dmg = Number(damageMatch[1]);
@@ -140,14 +155,20 @@ function apply(m0, a) {
     }
     for (const e of targets) {
       const hits = name === 'whirlwind' ? spent : name==='twin strike' ? 2 : name==='conflagration' ? number(text,/damage to ALL enemies (\d+) times/i,4) : name === 'dismantle' && amount(e.status,'Vulnerable') > 0 ? 2 : 1;
+      retaliationHits=hits;
       const bonus=name==='bully' ? number(text,/Deals (\d+) additional damage/i)*(amount(e.status,'Vulnerable')-(m.originalVulnerable[e.entity_id]??0)) : 0;
       for (let i=0; i<hits && e.hp>0; i++) hit(m,e,dmg+bonus,isAttack);
     }
+  }
+  if(isAttack){
+    applyRetaliation(m,targets,item,retaliationHits);
+    if(m.unsupported||m.hp<=0)return m;
   }
   if (isAttack) {
     m.attacks++; m.block += m.rage;
     if(m.freeAttack) { m.freeAttack=false; m.boundary='free_attack_consumed'; m.warnings.push('Re-read card costs after consuming Free Attack.'); }
     if (m.fan && m.fanProgress !== null && (m.fanProgress + m.attacks) % 3 === 0) m.block += 4;
+  }
   }
   if(!potion && item.type==='Skill' && m.fork!==null) { m.fork++; if(m.fork%10===0)m.block+=7; }
   if(name==='flame barrier')m.warnings.push('Immediate block included; retaliation damage and any kills during enemy attacks are omitted. Incoming may be overestimated.');
@@ -207,8 +228,15 @@ function apply(m0, a) {
   if(!potion && m.unmovable && /Gain \d+ Block/i.test(text) && name!=='rage' && name!=='feel no pain'){m.boundary='block_modifier_consumed';m.warnings.push('Re-read live block values after Unmovable: first-card doubling must not be reused.');}
   if(!potion && /\bBound\b/.test(text)){m.boundary='bound_card_played';m.warnings.push('Bound card played: re-observe remaining card legality before continuing.');}
   if(!potion && m.ringing){m.boundary='card_play_limit';m.warnings.push('A visible power limits card plays; re-observe legality after this card instead of assuming remaining plays.');}
+  // A departure is not a kill: do not trigger the minion's on-death effects.
+  const minionRule=e=>(e.status??[]).some(p=>/^Minions abandon combat without their leader\.?$/i.test((p.description??'').trim()));
+  const leaders=m.enemies.filter(e=>!minionRule(e));
+  const leaderDeathUncertain=leaders.some(e=>(e.status??[]).some(p=>/when killed|upon dying|on death|when this dies|would be defeated|reviv|resurrect|transform/i.test(p.description??'')));
+  if(leaders.length===1 && leaders[0].hp<=0 && !leaderDeathUncertain && !m.unsupported){
+    for(const e of m.enemies.filter(e=>e.hp>0 && minionRule(e))){e.hp=0;e.departedWithLeader=leaders[0].entity_id;}
+  }
   if (m.enemies.every(e => e.hp <= 0)) {
-    const deathEffects=m.enemies.flatMap(e=>(e.status??[]).filter(p=>/when killed|upon dying|on death|when this dies|would be defeated|revives?/i.test(p.description??'')));
+    const deathEffects=m.enemies.filter(e=>!e.departedWithLeader).flatMap(e=>(e.status??[]).filter(p=>/when killed|upon dying|on death|when this dies|would be defeated|revives?/i.test(p.description??'')));
     m.boundary=deathEffects.length?'death_effect':'combat_won';
     if(deathEffects.length){m.deathUnresolved=true;m.warnings.push('Enemy death triggers remain unresolved: do not assume victory or survival. Re-observe the death effect.');}
   }
@@ -231,7 +259,7 @@ function forecast(m, s) {
       incoming += perHit * Number(match[2] ?? 1);
     }
   }
-  const defeatedEnemies = s.battle.enemies.filter(e=>e.hp>0 && m.enemies.some(after=>after.entity_id===e.entity_id && after.hp<=0)).map(e=>({
+  const defeatedEnemies = s.battle.enemies.filter(e=>e.hp>0 && m.enemies.some(after=>after.entity_id===e.entity_id && after.hp<=0 && !after.departedWithLeader)).map(e=>({
     id:e.entity_id,name:e.name,
     attackRemoved:(e.intents??[]).reduce((sum,i)=>{
       if(!/attack|deathblow/i.test(i.type??'') && !/attack.*\d+ damage/i.test(i.description??''))return sum;
@@ -243,22 +271,30 @@ function forecast(m, s) {
   const block = m.block + m.plating + m.metallicize;
   const positioningUnknown = [...(s.player.status??[]),...s.battle.enemies.flatMap(e=>e.status??[])].some(p=>/from behind|orientation/i.test(p.description??''));
   const lethalTurnRule=m.enemies.filter(e=>e.hp>0&&!m.stunned.includes(e.entity_id)).flatMap(e=>e.status??[]).some(p=>/takes? (?:its|their) turn.*(?:you.*die|kill you)/i.test(p.description??''));
-  const uncertain = lethalTurnRule || positioningUnknown || m.unsupported || m.deathUnresolved || defeatedEnemies.some(e=>e.deathRules.length) || !parsed;
+  const facingProjection=positioningUnknown?facingDamage(s,m.steps,m.enemies):null;
+  const facingEffectsChanged=m.enemies.some(e=>JSON.stringify(e.status)!==JSON.stringify(s.battle.enemies.find(x=>x.entity_id===e.entity_id)?.status));
+  const facingUsable=facingProjection&&!facingEffectsChanged&&!m.unsupported;
+  if(facingUsable)incoming=facingProjection.incomingMax;
+  const uncertain = lethalTurnRule || (positioningUnknown&&!facingUsable) || m.unsupported || m.deathUnresolved || defeatedEnemies.some(e=>e.deathRules.length) || !parsed;
   const endTurnCardDamage = m.enemies.some(e=>e.hp>0) ? m.hand.reduce((sum,c)=>sum+(/At the end of your turn, if this is in your Hand, take (\d+) damage/i.test(c.description??'') ? number(c.description,/take (\d+) damage/i) : 0),0) : 0;
   const endTurnCardHpLoss = m.enemies.some(e=>e.hp>0) ? m.hand.reduce((sum,c)=>sum+number(c.description,/At the end of your turn, if this is in your Hand,\s+lose (\d+) HP/i),0) : 0;
   const projectedLoss = endTurnCardHpLoss + Math.max(0,incoming+endTurnCardDamage-block);
   const loss = Math.max(0,s.player.hp-m.hp) + projectedLoss;
   const warnings = [...new Set(m.warnings)];
   if(lethalTurnRule)warnings.push('A visible rule says the enemy taking its turn kills you regardless of ordinary block. Attack-only HP estimates cannot establish survival; prevent that turn using a supported kill or stated interruption.');
-  if(positioningUnknown)warnings.push('Position-dependent incoming damage is not modeled; targeting can change orientation. Survival is uncertain.');
+  if(positioningUnknown&&!facingUsable)warnings.push('Position-dependent incoming damage is not modeled; targeting can change orientation. Survival is uncertain.');
   if (!parsed) warnings.push('Some incoming attacks could not be parsed.');
   return {
+    ...(facingUsable?{facingProjection}:{}),
+    ...(positioningUnknown?{facingReview:{lastTargetedAction:[...m.steps].reverse().find(a=>a.command?.target)??null,note:facingUsable?'Use facingProjection for the candidate final direction; incoming uses its conservative upper bound. Facing evidence comes from executed actions; re-observe after every action.':'Visible rules say targeting changes orientation. Compare the final target with each surviving attacker before ending. Current facing and unmodified attack values are not supplied, so do not multiply displayed intents again or assume exact damage after turning. Reserve an affordable targeted card or potion when a final turn can reduce incoming damage; re-observe live intents after it. Untargeted block or area damage is not evidence of turning.'}}:{}),
     damage: m.unsupported ? null : m.cardDamage,
     block: m.unsupported ? null : block,
     incoming: parsed ? incoming : null,
     endTurnCardDamage, endTurnCardHpLoss,
     defeatedEnemies,
-    delayedDeathEffects:m.enemies.flatMap(e=>(e.status??[]).filter(p=>/when killed|upon dying|on death|when this dies|would be defeated|revives?/i.test(p.description??'')).map(p=>({enemy:e.name,rule:p.description,note:'Not included in current-turn attack total; death may not end combat.'}))),
+    retaliationEvents:m.retaliationEvents,
+    departedMinions:m.enemies.filter(e=>e.departedWithLeader).map(e=>({id:e.entity_id,name:e.name,leader:e.departedWithLeader,reason:'Visible rule: abandons combat without its leader; departure is not a death.'})),
+    delayedDeathEffects:m.enemies.filter(e=>!e.departedWithLeader).flatMap(e=>(e.status??[]).filter(p=>/when killed|upon dying|on death|when this dies|would be defeated|revives?/i.test(p.description??'')).map(p=>({enemy:e.name,rule:p.description,note:'Not included in current-turn attack total; death may not end combat.'}))),
     hpLoss: uncertain ? null : loss,
     hpAfter: uncertain ? null : Math.max(0,s.player.hp-loss),
     survives: uncertain ? null : m.hp > projectedLoss,
@@ -329,6 +365,38 @@ export function planCandidates(s, { maxDepth=6, beamWidth=256, maxPlans=64 }={})
     details:m.steps[0].details,
     plan:m.steps.map(a=>({label:a.label,command:a.command})), forecast:forecast(m,s),
   }));
+}
+
+// Offline opt-in: rebuild complete plans with Rage before attacks, preserving
+// original card identity as hand indices shift. Baseline candidates are untouched.
+export function withRageReorders(s,candidates,{maxExtra=16}={}) {
+  const added=[],seen=new Set(candidates.map(c=>JSON.stringify(c.plan?.map(p=>p.command))));
+  for(const candidate of candidates){
+    if(added.length>=maxExtra)break;
+    if(!candidate.plan || candidate.plan.length<2)continue;
+    let m=initial(s);const identities=[];let valid=true;
+    for(const step of candidate.plan){
+      if(m.boundary){valid=false;break;}
+      const a=available(m,s).find(a=>JSON.stringify(a.command)===JSON.stringify(step.command));
+      if(!a){valid=false;break;}
+      identities.push({action:a.command.action,source:a.details?.sourceIndex,target:a.command.target,slot:a.command.slot,name:a.details?.name,type:a.details?.type});
+      m=apply(m,a);if(!m){valid=false;break;}
+    }
+    if(!valid)continue;
+    const index=identities.findIndex(a=>a.action==='play_card'&&a.name?.replace(/\+$/,'')==='Rage');
+    if(index<1||!identities.slice(0,index).some(a=>a.type==='Attack'))continue;
+    const ordered=[identities[index],...identities.filter((_,i)=>i!==index)];m=initial(s);
+    for(const id of ordered){
+      if(m.boundary){valid=false;break;}
+      const a=available(m,s).find(a=>a.command.action===id.action && (id.action==='play_card'?a.details?.sourceIndex===id.source&&a.command.target===id.target:id.action==='use_potion'?a.command.slot===id.slot&&a.command.target===id.target:true));
+      if(!a){valid=false;break;}m=apply(m,a);if(!m){valid=false;break;}
+    }
+    if(!valid)continue;
+    const key=JSON.stringify(m.steps.map(a=>a.command));if(seen.has(key))continue;
+    seen.add(key);let id='rage-reorder-'+added.length;while(candidates.some(c=>c.id===id))id+='x';
+    added.push({id,command:m.steps[0].command,label:m.steps.map(a=>a.label).join(' → '),details:m.steps[0].details,plan:m.steps.map(a=>({label:a.label,command:a.command})),forecast:forecast(m,s),reorderedFrom:candidate.id});
+  }
+  return [...candidates,...added];
 }
 
 export function projectSequence(s, labels) {

@@ -1,0 +1,343 @@
+{
+  "state": {
+    "state_type": "monster",
+    "battle": {
+      "round": 4,
+      "turn": "player",
+      "is_play_phase": true,
+      "enemies": [
+        {
+          "entity_id": "SEAPUNK_0",
+          "combat_id": 2,
+          "name": "Seapunk",
+          "hp": 27,
+          "max_hp": 44,
+          "block": 0,
+          "status": [
+            {
+              "id": "VULNERABLE_POWER",
+              "name": "Vulnerable",
+              "amount": 1,
+              "type": "Debuff",
+              "description": "Receive 50% more damage from Attacks for 1 turn.",
+              "keywords": []
+            },
+            {
+              "id": "STRENGTH_POWER",
+              "name": "Strength",
+              "amount": 1,
+              "type": "Buff",
+              "description": "Increases attack damage by 1.",
+              "keywords": []
+            }
+          ],
+          "intents": [
+            {
+              "type": "Attack",
+              "label": "12",
+              "title": "Aggressive",
+              "description": "This enemy intends to Attack for 12 damage."
+            }
+          ]
+        }
+      ]
+    },
+    "run": {
+      "act": 1,
+      "floor": 12,
+      "ascension": 0
+    },
+    "player": {
+      "character": "The Ironclad",
+      "hp": 74,
+      "max_hp": 91,
+      "block": 0,
+      "energy": 2,
+      "max_energy": 3,
+      "hand": [
+        {
+          "id": "STRIKE_IRONCLAD",
+          "name": "Strike",
+          "type": "Attack",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Replay 1.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Spiral",
+              "description": "This card gains Replay 1."
+            },
+            {
+              "name": "Replay",
+              "description": "Plays this card an additional time."
+            }
+          ],
+          "index": 0,
+          "target_type": "AnyEnemy",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 1,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "name": "Battle Trance",
+          "type": "Skill",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 3 cards. You cannot draw additional cards this turn.",
+          "rarity": "Uncommon",
+          "is_upgraded": false,
+          "keywords": [],
+          "index": 2,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        },
+        {
+          "id": "DEFEND_IRONCLAD",
+          "name": "Defend",
+          "type": "Skill",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block.",
+          "rarity": "Basic",
+          "is_upgraded": false,
+          "keywords": [
+            {
+              "name": "Block",
+              "description": "Until next turn, prevents damage."
+            }
+          ],
+          "index": 3,
+          "target_type": "Self",
+          "can_play": true,
+          "unplayable_reason": null
+        }
+      ],
+      "draw_pile_count": 3,
+      "discard_pile_count": 6,
+      "exhaust_pile_count": 0,
+      "draw_pile": [
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 12 damage. Draw 1 card."
+        },
+        {
+          "name": "True Grit",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random."
+        }
+      ],
+      "discard_pile": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 11 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 13 damage."
+        }
+      ],
+      "exhaust_pile": [],
+      "deck": [
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage. Replay 1."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 6 damage."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Defend",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 5 Block."
+        },
+        {
+          "name": "Bash",
+          "cost": "2",
+          "star_cost": null,
+          "description": "Deal 8 damage. Apply 2 Vulnerable."
+        },
+        {
+          "name": "Pommel Strike",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Deal 9 damage. Draw 1 card."
+        },
+        {
+          "name": "Battle Trance",
+          "cost": "0",
+          "star_cost": null,
+          "description": "Draw 3 cards. You cannot draw additional cards this turn."
+        },
+        {
+          "name": "True Grit",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 7 Block. Exhaust 1 card at random."
+        },
+        {
+          "name": "Inflame+",
+          "cost": "1",
+          "star_cost": null,
+          "description": "Gain 3 Strength."
+        }
+      ],
+      "gold": 87,
+      "status": [
+        {
+          "id": "STRENGTH_POWER",
+          "name": "Strength",
+          "amount": 3,
+          "type": "Buff",
+          "description": "Increases attack damage by 3.",
+          "keywords": []
+        }
+      ],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "Burning Blood",
+          "description": "At the end of combat, heal 6 HP.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "NUTRITIOUS_OYSTER",
+          "name": "Nutritious Oyster",
+          "description": "Upon pickup, raise your Max HP by 11.",
+          "counter": null,
+          "keywords": []
+        },
+        {
+          "id": "VENERABLE_TEA_SET",
+          "name": "Venerable Tea Set",
+          "description": "Whenever you enter a Rest Site, start the next combat with an additional [ironclad_energy_icon.png][ironclad_energy_icon.png].",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        },
+        {
+          "id": "ART_OF_WAR",
+          "name": "Art of War",
+          "description": "If you do not play any Attacks during your turn, gain an additional [ironclad_energy_icon.png] next turn.",
+          "counter": null,
+          "keywords": [
+            {
+              "name": "Energy",
+              "description": "Energy is used to play cards from your Hand."
+            }
+          ]
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  },
+  "observedDamage": 26,
+  "source": "2026-09-22T10-40-08.450Z.jsonl:98"
+}
