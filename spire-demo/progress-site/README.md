@@ -15,3 +15,5 @@ The final-fight replay contains 49 recorded decisions from run #182, exported wi
 Published run and strategy dates use calendar dates only, with the original Eastern calendar day preserved. Exact timestamps stay in local evidence.
 
 Each run has a collapsed final-build view with card counts, upgrades, enchantments, relics, and remaining potions. Builds come from native saved history, matched to the existing snapshot by date, duration, outcome, and Ascension. Refresh them with `python3 spire-demo/build_run_builds.py --history-dir /path/to/history`. Only the selected build fields are exported; raw saves, player identifiers, seeds, and exact times stay local.
+
+The “What we asked Jev” section shows three decisions from run #182, including all seven first-pass assessments and the reviewed choice. Question wording is shortened from the runner prompts; answers are exported from recorded logs with `spire-demo/build-question-examples.py --log /path/to/winning-run.jsonl`. The section does not present a generated explanation as Jev’s private reasoning.
