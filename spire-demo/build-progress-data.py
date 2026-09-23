@@ -1,13 +1,15 @@
 import json,datetime,collections,argparse,csv,statistics
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from build_run_builds import final_build
 base=Path(__file__).parent.parent
 parser=argparse.ArgumentParser(description='Build sanitized run progress and recorded token usage from local evidence.')
 parser.add_argument('--history-dir',type=Path,required=True,help='Native modded profile saves/history directory')
 args=parser.parse_args()
 hist=args.history_dir
 native=sorted([json.loads(p.read_text()) for p in hist.glob('*.run')],key=lambda d:d['start_time'])
-logs=sorted((base/'.private/spire-runs').glob('*.jsonl'))
+# This snapshot ends with the final saved run; later capture sessions are separate.
+logs=sorted((base/'.private/spire-runs').glob('*.jsonl'))[:len(native)]
 rows=[];onsets={};reviews={}
 for idx,p in enumerate(logs):
  input_tokens=0;output_tokens=0;missing_usage=0;calls=0;count=0;start=None;end=None;policies=[];vers=[];maxfloor=0;act=1;assisted=False;finalhp=None;bosses=[]
@@ -39,6 +41,7 @@ for idx,p in enumerate(logs):
  reason=n.get('killed_by_encounter','NONE.NONE').split('.')[-1].replace('_',' ').title()
  rows.append({'n':idx+1,'start':start,'end':end,'floor':maxfloor,'act':act,'win':n['win'],'seconds':n['run_time'],'decisions':count,'inputTokens':input_tokens,'outputTokens':output_tokens,'totalTokens':input_tokens+output_tokens,'missingUsage':missing_usage,'loggedCalls':calls,'policies':policies,'reviews':vers,'assisted':assisted,'encounter':reason if reason!='None' else ('Victory' if n['win'] else 'Unrecorded'),'bosses':bosses,'ascension':n['ascension']})
 assert len(rows)==len(native)==182
+for row,saved in zip(rows,native):row['build']=final_build(saved)
 # Publish calendar dates, never exact activity times. Retain timestamps above for matching.
 def public_date(value):
  return datetime.datetime.fromisoformat(value.replace('Z','+00:00')).astimezone(ZoneInfo('America/New_York')).date().isoformat() if value else None
