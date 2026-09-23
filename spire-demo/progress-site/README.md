@@ -1,4 +1,4 @@
-# Jev — The Climb
+# Jev the Spire
 
 Static progress dashboard with 182-run snapshot, strategy history, and recorded Jev token usage.
 

@@ -16,3 +16,5 @@
 .closing{grid-template-columns:1fr;gap:24px}.closing>div:first-child p{max-width:850px}.winning-build{margin-top:0}
 
 #chart{min-width:0}.chart-scroll{overflow-x:hidden}
+
+.brand{letter-spacing:.02em;white-space:nowrap}.header-links{display:flex;align-items:center;gap:24px}.github-link{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;padding:8px 12px;border:1px solid var(--line);border-radius:6px;white-space:nowrap}.github-link:hover{border-color:var(--green);color:var(--green)}.footer-repo{color:var(--muted);text-decoration:none}.footer-repo:hover{color:var(--green)}@media(max-width:900px){.header-links .archive{display:none}}
