@@ -66,7 +66,7 @@ Restarting restores the previous session **paused**. After a finished run, stop 
 
 ## Progress visualizer
 
-[**Jev the Spire**](https://jev-the-climb.alex900731.chatgpt.site) is the owner-private hosted dashboard. The complete static visualizer and sanitized 182-run snapshot are included in [spire-demo/progress-site](spire-demo/progress-site). You can view them locally without a Sites account:
+[**Jev the Spire**](https://jev-the-spire.alex900731.chatgpt.site) is the public hosted dashboard. The complete static visualizer and sanitized 182-run snapshot are included in [spire-demo/progress-site](spire-demo/progress-site). You can view them locally without a Sites account:
 
 ```sh
 npm run progress
