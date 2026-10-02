@@ -13,7 +13,7 @@ This is an experiment, not a solved-game bot. Its first verified Ironclad Ascens
 - **Slay the Spire 2**, installed locally.
 - **[STS2MCP](https://github.com/Gennadiyev/STS2MCP)**, a compatible game mod that lets the app read game state and perform actions.
 - **Node.js 22 or newer.**
-- A **[TypeSafe](https://docs.typesafe.ai/api) API key** with credits. Playing and model-based benchmarks make paid API calls.
+- A **[TypeSafe](https://docs.typesafe.ai/api) API key** with credits. Playing and model-based benchmarks make paid API calls. To use a TypeSafe-compatible model server instead, see [Use a different model server](#use-a-different-model-server).
 
 ## Get started
 
@@ -34,6 +34,8 @@ This is an experiment, not a solved-game bot. Its first verified Ironclad Ascens
 
    On Windows PowerShell, use `$env:TYPESAFE_API_KEY="your-key-here"` followed by `npm start`.
 
+   To use a TypeSafe-compatible model server instead of the hosted one, set `TYPESAFE_BASE_URL` and `TYPESAFE_DEFAULT_MODEL` as described in [Use a different model server](#use-a-different-model-server).
+
    There are no npm dependencies to install.
 
 4. Open **http://127.0.0.1:4317**, start a normal singleplayer run in the game, and press **Autoplay**.
@@ -41,6 +43,26 @@ This is an experiment, not a solved-game bot. Its first verified Ironclad Ascens
 Use **Preview** to see a choice without playing it, **One move** to execute one decision, and **Pause** to take over. Pause prevents the next action; it cannot undo one already sent to the game.
 
 **Mod compatibility:** game updates can break the bridge. Development used game v0.107.1 with STS2MCP source commit `55e064850a68f3b4cde7e5fd525bf9b2dec4e885`, built against the installed game. The 0.4.0 release binary did not work with that game version. See [bridge notes](docs/bridge.md) if the dashboard cannot connect.
+
+## Use a different model server
+
+Jev asks `https://api.typesafe.ai/v1/systemone`. Three environment variables, named the way the official TypeSafe SDK names them:
+
+| Variable | |
+|---|---|
+| `TYPESAFE_BASE_URL` | where the endpoint lives; defaults to `https://api.typesafe.ai` |
+| `TYPESAFE_DEFAULT_MODEL` | the model to ask; defaults to `jev-latest`, which only the hosted endpoint has |
+| `TYPESAFE_API_KEY` | the key to send; read from the environment or `.private/typesafe.cfg`, and required on any base |
+
+```sh
+TYPESAFE_BASE_URL="https://openrouter.ai/api" TYPESAFE_API_KEY="your-key-here" TYPESAFE_DEFAULT_MODEL="inception/mercury-decide:free" npm start
+```
+
+On Windows PowerShell, set `$env:TYPESAFE_BASE_URL`, `$env:TYPESAFE_API_KEY` and `$env:TYPESAFE_DEFAULT_MODEL` the same way, then run `npm start`.
+
+The endpoint and the model are read once at startup, so set them before `npm start`.
+
+A replacement server has to reproduce that endpoint: answer each question with one of the candidate IDs Jev sent in `questions.<role>.criteria`, returned as `answers.<role>.choice`. An unlisted ID pauses the run. Jev's prompt runs 15,000 to 22,000 tokens, so a smaller model is refused with a 422 rather than answered from part of the state; raise `TYPESAFE_DEFAULT_MODEL` for one with a larger context.
 
 ## Watch the decisions
 
@@ -60,7 +82,7 @@ Jev is the only AI model making gameplay choices. Forecasts are incomplete: they
 
 ## Local data and limits
 
-Your key stays on the local server. Game observations, candidate plans, and recent decision context are sent to TypeSafe. Gameplay logs and checkpoints stay in the ignored `.private/` folder. Never commit that folder or your key.
+Your key stays on the local server. Game observations, candidate plans, and recent decision context are sent to TypeSafe, or to whichever server `TYPESAFE_BASE_URL` points at. Gameplay logs and checkpoints stay in the ignored `.private/` folder. Never commit that folder or your key.
 
 The server binds to localhost. Keep the game bridge local too. Default session limits are 2,000 decisions and 10 million input tokens; override `MAX_DECISIONS` or `MAX_INPUT_TOKENS` if needed. Displayed costs are estimates, not a billing meter.
 

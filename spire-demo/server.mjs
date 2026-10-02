@@ -14,6 +14,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { actionsFor, fingerprint, factsFor } from './actions.mjs';
 import { decisionCandidates, decisionQuestion, POLICY_VERSION } from './planner.mjs';
+import { JEV_API_URL } from './jev-api.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT ?? 4317);
@@ -140,7 +141,7 @@ async function step(token, preview = false) {
       ask:async payload=>{
         if(token!==generation)throw Error('Decision cancelled.');
         if(view.inputTokens>=MAX_INPUT_TOKENS||view.decisions>=MAX_DECISIONS)throw Error('Session budget reached.');
-        const response=await fetch('https://api.typesafe.ai/v1/systemone',{
+        const response=await fetch(JEV_API_URL,{
           method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${apiKey}`},
           body:JSON.stringify(payload),signal:AbortSignal.timeout(30000),
         });
@@ -229,5 +230,5 @@ const server = http.createServer(async (req, res) => {
     json(404, { error: 'Not found' });
   } catch { json(500, { error: 'Local server error' }); }
 });
-server.listen(port, '127.0.0.1', () => console.log(`Jev plays the Spire: http://127.0.0.1:${port}\nKey configured: ${Boolean(apiKey)}\nDecision log: ${logFile}`));
+server.listen(port, '127.0.0.1', () => console.log(`Jev plays the Spire: http://127.0.0.1:${port}\nEndpoint: ${JEV_API_URL}\nKey configured: ${Boolean(apiKey)}\nDecision log: ${logFile}`));
 process.on('SIGINT', () => { stop('Stopped'); server.close(); process.exit(0); });

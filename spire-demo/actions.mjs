@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { TYPESAFE_DEFAULT_MODEL } from './jev-api.mjs';
 
 export function fingerprint(state) {
   return createHash('sha256').update(JSON.stringify(state)).digest('hex');
@@ -132,7 +133,7 @@ export function factsFor(s) {
 export function makeQuestion(state, actions) {
   if (!actions.length || actions.length > 255) throw new Error('Unsupported action count');
   return {
-    model: 'jev-latest',
+    model: TYPESAFE_DEFAULT_MODEL,
     state: { game: 'Slay the Spire 2', objective: 'Win this complete run without human gameplay decisions.', state, facts: factsFor(state) },
     questions: { move: {
       type: 'choice',

@@ -7,6 +7,7 @@ import {deliberate} from '../deliberation.mjs';
 import {simpleDeliberate,comparisonDeliberate} from './simple.mjs';
 import {decisionCandidates} from '../planner.mjs';
 import {encounterMemory} from '../encounters.mjs';
+import {JEV_API_URL} from '../jev-api.mjs';
 import {cases,grade} from './suite.mjs';
 import {freshCases,gradeFresh} from './fresh-suite.mjs';
 const benefits=process.argv.includes('--benefits');
@@ -36,7 +37,7 @@ for(let repeat=0;repeat<repeats;repeat++)for(let i=0;i<selected.length;i++){
   try{
    const result=await ({current:deliberate,net:netDeliberate,benefits:planBenefitDeliberate,simple:simpleDeliberate,comparison:comparisonDeliberate}[policy])({state,candidates,recent:policy==='benefits'?{...recent,persistentPlan:persistentPlan(state,fixture.history??[])}:recent,ask:async payload=>{
     if(totalTokens>2000000)throw Error('Benchmark input-token budget reached');
-    const r=await fetch('https://api.typesafe.ai/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});
+    const r=await fetch(JEV_API_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});
     if(!r.ok)throw Error('TypeSafe HTTP '+r.status);
     const response=await r.json();totalTokens+=response.usage?.input_tokens??0;calls.push({request:payload,response});return response;
    }});

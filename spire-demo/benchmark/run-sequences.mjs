@@ -5,6 +5,7 @@ import {deliberate} from '../deliberation.mjs';
 import {simpleDeliberate} from './simple.mjs';
 import {decisionCandidates} from '../planner.mjs';
 import {encounterMemory} from '../encounters.mjs';
+import {JEV_API_URL} from '../jev-api.mjs';
 const repeats=3,dir=new URL(`../../.private/spire-benchmark/sequences-${new Date().toISOString().replaceAll(':','-')}/`,import.meta.url);
 await mkdir(dir,{recursive:true});
 const sources=[...(await readdir(new URL('../',import.meta.url))).filter(x=>x.endsWith('.mjs')&&!x.endsWith('.test.mjs')), ...(await readdir(new URL('./',import.meta.url))).filter(x=>x.endsWith('.mjs')).map(x=>'benchmark/'+x)];
@@ -22,7 +23,7 @@ for(let repeat=0;repeat<repeats;repeat++)for(let i=0;i<sequenceCases.length;i++)
     const candidates=decisionCandidates(state),recent=encounterMemory(state,events);
     const answer=await (policy==='current'?deliberate:simpleDeliberate)({state,candidates,recent,ask:async request=>{
      if(totalTokens>=1500000)throw Error('Lab input-token budget reached');
-     const res=await fetch('https://api.typesafe.ai/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(request),signal:AbortSignal.timeout(45000)});
+     const res=await fetch(JEV_API_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(request),signal:AbortSignal.timeout(45000)});
      if(!res.ok)throw Error('TypeSafe HTTP '+res.status);
      const response=await res.json();totalTokens+=response.usage?.input_tokens??0;calls.push({request,response});return response;
     }});

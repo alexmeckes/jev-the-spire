@@ -1,6 +1,7 @@
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {deliberate} from '../deliberation.mjs';
 import {horizonDeliberate} from './next-decision.mjs';
+import {JEV_API_URL} from '../jev-api.mjs';
 const root=new URL('../../',import.meta.url),all=JSON.parse(await readFile(new URL('.private/spire-boss-review/2026-09-22-evidence.json',root)));
 const samples=[{id:'opening',...all.find(d=>d.session==='19-20-10.478'&&d.state.battle.round===1)},{id:'fatal-commit',...all.find(d=>d.session==='19-20-10.478'&&d.state.battle.round===12&&d.chosen.command.action==='play_card')}];
 if(process.env.SPIRE_REPLAY_CONTROLS==='1'){
@@ -20,7 +21,7 @@ for(let repeat=0;repeat<2;repeat++)for(const s of samples)for(const policy of re
  try{
  const options={state:s.state,candidates:s.candidates,recent:[],ask:async payload=>{
  if(tokens>600000)throw Error('Local replay token budget reached');
- const r=await fetch('https://api.typesafe.ai/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});
+ const r=await fetch(JEV_API_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});
  if(!r.ok)throw Error('HTTP '+r.status);const response=await r.json();tokens+=response.usage?.input_tokens??0;calls.push({request:payload,response});return response;
  }};
  const r=policy==='baseline'?await deliberate(options):await horizonDeliberate(options,{setup:s.id==='opening'});

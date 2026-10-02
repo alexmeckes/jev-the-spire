@@ -4,6 +4,7 @@ import {potionTiming} from './potion-timing.mjs';
 import {spendingRoutes} from './routes.mjs';
 import {mechanicsReview} from './mechanics.mjs';
 import {setupLinks} from './setup-links.mjs';
+import {TYPESAFE_DEFAULT_MODEL} from './jev-api.mjs';
 import {encounterBrief,deckSnapshot,visibleState} from './encounters.mjs';
 import { actionsFor, factsFor, makeQuestion } from './actions.mjs';
 
@@ -424,7 +425,7 @@ export function decisionQuestion(s,candidates) {
   s=visibleState(s);
   if(!isCombat(s)){const q=makeQuestion(s,candidates);q.state.encounter=encounterBrief(s);q.state.deck=deckSnapshot(s);q.state.spending_routes=spendingRoutes(s);return q;}
   return {
-    model:'jev-latest',
+    model:TYPESAFE_DEFAULT_MODEL,
     state:{game:'Slay the Spire 2',objective:'Win the run. Survive the current turn and preserve useful resources.',state:s,encounter:encounterBrief(s),deck:deckSnapshot(s),facts:factsFor(s),policy:POLICY_VERSION,setup_dependencies:setupLinks(s),mechanics_review:mechanicsReview(s),potion_timing:potionTiming(s),
       forecast_scope:'Plans are short prefixes, not complete optimal turns. Forecasts assume ending after the prefix. Null means unknown, not zero. Partial outcomes have explicit caveats. Do not treat displayed card damage as actual damage through enemy powers.'},
     questions:{move:{type:'choice',

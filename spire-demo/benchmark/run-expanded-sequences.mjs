@@ -5,6 +5,7 @@ import {deliberate} from '../deliberation.mjs';
 import {simpleDeliberate,comparisonDeliberate} from './simple.mjs';
 import {decisionCandidates} from '../planner.mjs';
 import {encounterMemory} from '../encounters.mjs';
+import {JEV_API_URL} from '../jev-api.mjs';
 const sequenceCases=baseCases.flatMap(b=>[0,1,2,3].map(v=>{const c=structuredClone(b);c.id+='-v'+v;c.state.battle.enemies[0].hp+=v*2;c.state.battle.enemies[0].max_hp=c.state.battle.enemies[0].hp;c.split=v<2?'development':'evaluation';return c;}));
 function oracle(s){let best=s.player.hp===0?0:-1;for(const command of labActions(s)){const n=stepLab(s,command);best=Math.max(best,n.terminal?n.state.player.hp:oracle(n.state));}return best;}
 const optima=Object.fromEntries(sequenceCases.map(c=>[c.id,oracle(c.state)]));
@@ -25,7 +26,7 @@ for(let repeat=0;repeat<repeats;repeat++)for(let i=0;i<sequenceCases.length;i++)
     const candidates=decisionCandidates(state),recent=encounterMemory(state,events);
     const answer=await (policy==='current'?deliberate:policy==='comparison'?comparisonDeliberate:simpleDeliberate)({state,candidates,recent,ask:async request=>{
      if(totalTokens>=2500000)throw Error('Lab input-token budget reached');
-     const res=await fetch('https://api.typesafe.ai/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(request),signal:AbortSignal.timeout(45000)});
+     const res=await fetch(JEV_API_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(request),signal:AbortSignal.timeout(45000)});
      if(!res.ok)throw Error('TypeSafe HTTP '+res.status);
      const response=await res.json();totalTokens+=response.usage?.input_tokens??0;calls.push({request,response});return response;
     }});

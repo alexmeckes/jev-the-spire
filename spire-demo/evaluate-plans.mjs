@@ -4,13 +4,14 @@ import {deliberate} from './deliberation.mjs';
 import {performance} from 'node:perf_hooks';
 import {actionsFor,makeQuestion} from './actions.mjs';
 import {decisionCandidates,decisionQuestion,POLICY_VERSION} from './planner.mjs';
+import {JEV_API_URL} from './jev-api.mjs';
 
 const config=await readFile(new URL('../.private/typesafe.cfg',import.meta.url),'utf8').catch(()=>'');
 const key=process.env.TYPESAFE_API_KEY??config.match(/^api_key\s*=\s*"?([^"\r\n]+)"?/m)?.[1]?.trim();
 if(!key)throw Error('TypeSafe API key not configured');
 async function ask(payload){
   const start=performance.now();
-  const r=await fetch('https://api.typesafe.ai/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(30000)});
+  const r=await fetch(JEV_API_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(30000)});
   if(!r.ok)throw Error(`TypeSafe HTTP ${r.status}`);
   return {result:await r.json(),latencyMs:Math.round(performance.now()-start)};
 }

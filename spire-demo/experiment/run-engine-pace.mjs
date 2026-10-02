@@ -6,6 +6,7 @@ import {decisionCandidates} from '../planner.mjs';
 import {encounterMemory} from '../encounters.mjs';
 import {cases,grade} from '../benchmark/suite.mjs';
 import {freshCases,gradeFresh} from '../benchmark/fresh-suite.mjs';
+import {JEV_API_URL} from '../jev-api.mjs';
 const root=new URL('../../',import.meta.url), samples=[];
 for(const session of ['2026-09-22T02-55-34.454Z','2026-09-22T08-34-14.523Z','2026-09-22T09-23-10.034Z']){
  const events=(await readFile(new URL('.private/spire-runs/'+session+'.jsonl',root),'utf8')).trim().split('\n').map(JSON.parse);let rewards=0;const rounds=new Set();
@@ -30,7 +31,7 @@ for(let repeat=0;repeat<2;repeat++)for(const [i,s] of samples.entries())for(cons
  try{
   const opts={state:s.state,candidates:s.candidates,recent:s.recent,ask:async payload=>{
    if(tokens>1800000)throw Error('Local benchmark budget reached');
-   const r=await fetch('https://api.typesafe.ai/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});if(!r.ok)throw Error('HTTP '+r.status);
+   const r=await fetch(JEV_API_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});if(!r.ok)throw Error('HTTP '+r.status);
    const response=await r.json();tokens+=response.usage?.input_tokens??0;calls.push({request:payload,response});return response;
   }};
   const result=policy==='current'?await deliberate(opts):await enginePaceDeliberate(opts,policy);

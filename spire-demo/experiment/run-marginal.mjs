@@ -6,6 +6,7 @@ import {decisionCandidates} from '../planner.mjs';
 import {encounterMemory} from '../encounters.mjs';
 import {cases,grade} from '../benchmark/suite.mjs';
 import {freshCases,gradeFresh} from '../benchmark/fresh-suite.mjs';
+import {JEV_API_URL} from '../jev-api.mjs';
 const root=new URL('../../',import.meta.url),samples=JSON.parse(await readFile(new URL('.private/spire-strength/inputs.json',root)));
 const dir=new URL('.private/spire-marginal/'+new Date().toISOString().replaceAll(':','-')+'/',root);await mkdir(dir,{recursive:true});
 await writeFile(new URL('inputs.json',dir),JSON.stringify(samples));
@@ -17,7 +18,7 @@ for(let repeat=0;repeat<2;repeat++)for(const [i,s] of samples.entries())for(cons
  try{
   const opts={state:s.state,candidates:s.candidates,recent:s.recent,ask:async payload=>{
    if(tokens>1500000)throw Error('Local benchmark budget reached');
-   const r=await fetch('https://api.typesafe.ai/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});if(!r.ok)throw Error('HTTP '+r.status);
+   const r=await fetch(JEV_API_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});if(!r.ok)throw Error('HTTP '+r.status);
    const response=await r.json();tokens+=response.usage?.input_tokens??0;calls.push({request:payload,response});return response;
   }};
   const result=policy==='current'?await deliberate(opts):await marginalDeliberate(opts);
